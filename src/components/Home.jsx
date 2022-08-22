@@ -22,12 +22,12 @@ const Home = () => {
         <h2 className="text-2xl text-gray-800 text-center md:text-left font-bold">
           Hi👋, I'm
         </h2>
-        <h1 className="text-5xl text-gray-800 text-center md:text-left font-bold">
+        <h1 className="text-5xl text-gray-800 text-center md:text-left font-bold my_text pb-2">
           Bekir Uğur
         </h1>
 
         <p className="text-lg text-gray-800 text-center md:text-left mt-2 px-4 md:px-0">
-          Welcome on my portfolio page! I'm a <span className="font-bold" >Full Stack Developer</span> and focused
+          Welcome on my portfolio page! I'm a <span className="font-bold my_text" >Full Stack Developer</span> and focused
           on building responsive fullstack web applications while learning &
           exploring other technologies.
         </p>
