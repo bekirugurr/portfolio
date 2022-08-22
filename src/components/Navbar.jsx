@@ -1,17 +1,15 @@
 import { useState } from "react";
+import {Link} from 'react-scroll'
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-      <nav className="relative flex flex-wrap items-center justify-between px-2 bg-gray-100  mb-3">
+      <nav className="fixed top-0 flex flex-wrap items-center justify-between px-2 bg-gray-100  mb-1 w-full opacity-70">
         <div className=" px-6 mx-auto flex flex-wrap items-center justify-between w-full">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <a
-              className="text-3xl font-normal leading-relaxed inline-block mr-4 pl-3 py-2 whitespace-nowrap"
-              href="#pablo"
-            >
-              <span className="text-green-400">B </span>Ugur
-            </a>
+          <Link activeClass="active" smooth spy to="home" className=" mr-4 pl-3  inline-block  items-center text-3xl font-normal leading-relaxed cursor-pointer">
+
+              <span className="text-green-400">B </span>Ugur</Link>
             <button
               className="text-white cursor-pointer text-xl leading-none px-2 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
@@ -41,54 +39,30 @@ const Navbar = () => {
             }
             id="example-navbar-danger"
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="nav-item py-1 ">
-                <a
-                  className="text-gray-600 px-2 flex items-center text-sm uppercase font-medium leading-snug hover:text-black hover:bg-red-600 py"
-                  href="#pablo"
-                >
-                  <span className="mx-1">Home</span>
-                </a>
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto ">
+              <li className="nav-item py-3 cursor-pointer hover:pb-2 hover:border-b-2 hover:border-black">
+              <Link activeClass="active" smooth spy to="home" className="text-gray-600 p-1 px-3 flex items-center text-lg font-medium leading-snug hover:text-black "> 
+                Home </Link>
               </li>
-              <li className="nav-item py-1 ">
-                <a
-                  className="text-gray-600 px-2 flex items-center text-sm uppercase font-medium leading-snug hover:text-black"
-                  href="#pablo"
-                >
-                  <span className="mx-1">Skills</span>
-                </a>
+              <li className="nav-item py-3 cursor-pointer hover:pb-2 hover:border-b-2 hover:border-black">
+              <Link activeClass="active" smooth spy to="skills" className="text-gray-600 p-1 px-3 flex items-center text-lg font-medium leading-snug hover:text-black "> 
+                Skills </Link>
               </li>
-              <li className="nav-item py-1 ">
-                <a
-                  className="text-gray-600 px-2 flex items-center text-sm uppercase font-medium leading-snug hover:text-black"
-                  href="#pablo"
-                >
-                  <span className="mx-1">Projects</span>
-                </a>
+              <li className="nav-item py-3 cursor-pointer hover:pb-2 hover:border-b-2 hover:border-black">
+              <Link activeClass="active" smooth spy to="projects" className="text-gray-600 p-1 px-3 flex items-center text-lg font-medium leading-snug hover:text-black "> 
+                Projects </Link>
               </li>
-              <li className="nav-item py-1 ">
-                <a
-                  className="text-gray-600 px-2 flex items-center text-sm uppercase font-medium leading-snug hover:text-black"
-                  href="#pablo"
-                >
-                  <span className="mx-1">About</span>
-                </a>
+              <li className="nav-item py-3 cursor-pointer hover:pb-2 hover:border-b-2 hover:border-black">
+              <Link activeClass="active" smooth spy to="about" className="text-gray-600 p-1 px-3 flex items-center text-lg font-medium leading-snug hover:text-black "> 
+                About </Link>
               </li>
-              <li className="nav-item py-1 ">
-                <a
-                  className="text-gray-600 px-2 flex items-center text-sm uppercase font-medium leading-snug  hover:text-black"
-                  href="#pablo"
-                >
-                  <span className="mx-1">Certificates</span>
-                </a>
+              <li className="nav-item py-3 cursor-pointer hover:pb-2 hover:border-b-2 hover:border-black">
+              <Link activeClass="active" smooth spy to="certificates" className="text-gray-600 p-1 px-2 flex items-center text-lg font-medium leading-snug hover:text-black "> 
+                Certificates </Link>
               </li>
-              <li className="nav-item py-1 ">
-                <a
-                  className="text-gray-600 px-2 flex items-center text-sm uppercase font-medium leading-snug  hover:text-black"
-                  href="#pablo"
-                >
-                  <span>Contact</span>
-                </a>
+              <li className="nav-item py-3 cursor-pointer hover:pb-2 hover:border-b-2 hover:border-black">
+              <Link activeClass="active" smooth spy to="contact" className="text-gray-600 p-1 px-3 flex items-center text-lg font-medium leading-snug hover:text-black "> 
+                Contact </Link>
               </li>
             </ul>
           </div>
