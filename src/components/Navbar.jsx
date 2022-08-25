@@ -41,27 +41,27 @@ const Navbar = () => {
           >
             <ul className="flex flex-col md:flex-row list-none md:ml-auto ">
               <li className="nav-item py-0 cursor-pointer">
-              <Link activeClass="active" smooth spy to="home" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700 "> 
+              <Link activeClass="active" smooth spy to="home" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700 " onClick={() => setNavbarOpen(false)}> 
                 Home </Link>
               </li>
               <li className="nav-item py-0 cursor-pointer">
-              <Link activeClass="active" smooth spy to="skills" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700"> 
+              <Link activeClass="active" smooth spy to="skills" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700" onClick={() => setNavbarOpen(false)}> 
                 Skills </Link>
               </li>
               <li className="nav-item py-0 cursor-pointer">
-              <Link activeClass="active" smooth spy to="projects" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700"> 
+              <Link activeClass="active" smooth spy to="projects" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700" onClick={() => setNavbarOpen(false)}> 
                 Projects </Link>
               </li>
               <li className="nav-item py-0 cursor-pointer">
-              <Link activeClass="active" smooth spy to="about" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700"> 
+              <Link activeClass="active" smooth spy to="about" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700" onClick={() => setNavbarOpen(false)}> 
                 About </Link>
               </li>
               <li className="nav-item py-0 cursor-pointer">
-              <Link activeClass="active" smooth spy to="certificates" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700"> 
+              <Link activeClass="active" smooth spy to="certificates" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700" onClick={() => setNavbarOpen(false)}> 
                 Certificates </Link>
               </li>
               <li className="nav-item py-0 cursor-pointer">
-              <Link activeClass="active" smooth spy to="contact" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700"> 
+              <Link activeClass="active" smooth spy to="contact" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700" onClick={() => setNavbarOpen(false)}> 
                 Contact </Link>
               </li>
             </ul>

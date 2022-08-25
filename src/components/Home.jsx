@@ -10,15 +10,16 @@ const Home = () => {
   return (
     <main
       id="home"
-      className="h-screen bg-blue-50 pt-16 text-center flex flex-row flex-wrap md:flex-nowrap pl-12 lg:pl-36 pr-12 lg:pr-36 sm:gap-none md:gap-12 justify-center items-center sm:pb-4 md:pb-24  "
+      className="min-h-screen pt-24 md:pt-36  bg-blue-50 text-center pb-16 md:pb-48 "
     >
+      <div className="flex flex-row flex-wrap md:flex-nowrap pl-12 lg:pl-36 pr-12 lg:pr-36 sm:gap-none md:gap-12 justify-center items-center pb-0 md:pb-7">
       <img
         src={profilepic}
         alt="bekir's_photo"
         className="w-48 h-48 md:w-72 md:h-72 lg:w-72 lg:h-72 rounded-3xl bg-green-300 "
       />
 
-      <div className="flex flex-col gap-3 -mt-4 md:-mt-4">
+      <div className="flex flex-col gap-2 mt-8 md:-mt-4 lg:mt-0">
         <h2 className="text-2xl text-gray-800 text-center md:text-left font-bold">
           Hi👋, I'm
         </h2>
@@ -31,7 +32,7 @@ const Home = () => {
           on building responsive fullstack web applications while learning &
           exploring other technologies.
         </p>
-        <ul className="flex gap-5 justify-center md:justify-start mt-3 ">
+        <ul className="flex gap-5 justify-center md:justify-start mt-3 pb-1 md:">
           <li className="w-12 h-12 rounded-full bg-gray-600 transition duration-150  hover:bg-gray-800 hover:ease-in-out flex justify-center items-center">
           <a href="https://github.com/bekirugurr" target='_blank'>
             <FaGithub className='w-7 h-7 text-white'/></a>
@@ -43,6 +44,7 @@ const Home = () => {
             <FaRegEnvelope  className='w-6 h-6 text-white'/></a>
           </li>
         </ul>
+      </div>
       </div>
     </main>
   );
