@@ -3,3 +3,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.project_div{
+  height: 28rem;
+  width: 35rem;
+}

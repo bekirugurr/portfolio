@@ -4,7 +4,7 @@ import {Link} from 'react-scroll'
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-      <nav className="fixed top-0 flex flex-wrap items-center justify-between px-1 md:px-2 bg-gray-200  mb-1 w-full opacity-70">
+      <nav className="fixed top-0 flex flex-wrap items-center justify-between px-1 md:px-2 bg-gray-200  mb-1 w-full opacity-70 z-50 font-body">
         <div className=" px-6 mx-auto flex flex-wrap items-center justify-between w-full">
           <div className="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
           <Link activeClass="active" smooth spy to="home" className=" mr-4 pl-3  inline-block  items-center text-3xl font-normal leading-relaxed cursor-pointer">

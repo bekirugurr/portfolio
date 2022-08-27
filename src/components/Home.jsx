@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <main
       id="home"
-      className="min-h-screen pt-24 md:pt-36  bg-blue-50 text-center pb-16 md:pb-48 "
+      className="min-h-screen pt-24 md:pt-36  bg-blue-50 text-center pb-16 md:pb-48 font-body"
     >
       <div className="flex flex-row flex-wrap md:flex-nowrap pl-12 lg:pl-36 pr-12 lg:pr-36 sm:gap-none md:gap-12 justify-center items-center pb-0 md:pb-7">
       <img
