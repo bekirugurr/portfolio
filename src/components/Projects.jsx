@@ -2,39 +2,21 @@ import React from "react";
 import blogGif from "../assets/blog_animation.gif";
 import cheackOutGif from "../assets/checkout.gif";
 import movieAppGif from "../assets/movieApp.gif";
+import flightAPIGif from "../assets/flightAPI.gif";
 import { FiFolder } from "react-icons/fi";
 import { VscGithub } from "react-icons/vsc";
 import { HiOutlineExternalLink } from "react-icons/hi";
 
 const Projects = () => {
   return (
-    <div id="projects" className="min-h-screen pt-16 font-body">
+    <div id="projects" className="min-h-screen pt-16 font-body mb-7">
       <h1 className="text-4xl text-gray-800 mt-4 mx-7 md:mx-4 lg:mx-24 font-bold font-body">
         Projects
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-4 lg:grid-rows-2 gap-5 mx-auto py-6 md:mx-24 lg:px-6 xl:px-24 xl:mx-9 mx-5 md:mx-10 lg:mx-0">
         <div className="bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-between">
-          <h2 className="text-2xl font-bold text-center mt-5 mb-1">Blog App</h2>
-          <p className="mx-3 my-2 px-3">
-            All blog posts display on dashboard and each post's detail display
-            on detail page. Adding, deleting and updating, liking blog posts,
-            making comments, register, login, logout and updating profile can be
-            done. Both frontend (react) and backend (django rest framework) were
-            made by me.
-          </p>
-          <div className="bottom-0 w-full flex justify-center text-green-400">
-            <span className="font-bold text-lg px-2 mx-1">React</span>
-            <span className="font-bold text-lg px-2 mx-1">Redux</span>
-            <span className="font-bold text-lg px-2 mx-1">Material UI</span>
-            <span className="font-bold text-lg px-2 mx-1">Django Rest API</span>
-          </div>
-          <img
-            src={blogGif}
-            alt="blog animation"
-            className=" border-2 border-emerald-500 rounded-lg"
-          />
-          <FiFolder className="w-12 h-12 text-green-400 absolute top-4 left-7" />
-          <div className="text-green-400 absolute top-4 right-2 flex">
+          <h2 className="text-2xl font-bold text-center mt-5 sm:mb-1">Blog App</h2>
+          <div className="text-green-400 sm:absolute sm:top-4 right-2 flex flex-row">
             <a
               href="https://github.com/bekirugurr/react-redux-blog-app"
               target="_blank"
@@ -60,24 +42,40 @@ const Projects = () => {
               <p className="text-xs">Backend</p>
             </a>
           </div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-5  items-center rounded-lg ">
-          <div className="col-span-2 h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
-            <h2 className="text-2xl font-bold text-center my-3">Portfolio</h2>
-            <p className="mx-3 px-3 my-6 md:my-12 lg:my-6">
+          <p className="mx-3 my-0 sm:my-2 px-6 sm:px-3">
             All blog posts display on dashboard and each post's detail display
             on detail page. Adding, deleting and updating, liking blog posts,
             making comments, register, login, logout and updating profile can be
             done. Both frontend (react) and backend (django rest framework) were
             made by me.
           </p>
-            <div className="bottom-0 w-full flex justify-center text-green-400 absolute bottom-2">
+          <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400">
+            <span className="font-bold text-lg px-2 mx-1">React</span>
+            <span className="font-bold text-lg px-2 mx-1">Redux</span>
+            <span className="font-bold text-lg px-2 mx-1">Material UI</span>
+            <span className="font-bold text-lg px-2 mx-1">Django Rest API</span>
+          </div>
+          <img
+            src={blogGif}
+            alt="blog animation"
+            className=" border-2 border-emerald-500 rounded-lg"
+          />
+          <FiFolder className="hidden sm:block w-12 h-12 text-green-400 absolute top-4 left-7" />
+          
+        </div>
+
+        <div className="grid grid-cols-1 grid-rows-3 sm:grid-rows-2 sm:grid-cols-2 gap-5  items-center rounded-lg ">
+          <div className="sm:col-span-2 h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-0 sm:pb-2 rounded-lg text-white flex flex-col justify-start relative">
+            <h2 className="text-2xl font-bold text-center mt-2 mb-1 sm:my-3">Portfolio</h2>
+            <p className="mx-3 px-3 mt-2 mb-3 sm:my-6 md:my-12 lg:my-6">
+            Tailwind CSS is used for styling, Framer Motion is used for motions and react scroll package is used for navigation. 
+          </p>
+            <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">React</span>
               <span className="font-bold text-lg px-2 mx-1">Tailwind</span>
               <span className="font-bold text-lg px-2 mx-1">Framer Motion</span>
             </div>
-            <FiFolder className="w-12 h-12 text-green-400 absolute top-4 left-7" />
+            <FiFolder className="hidden sm:block w-12 h-12 text-green-400 absolute top-4 left-7" />
             <div className="text-green-400 absolute  top-4 right-3 flex">
               <a
                 href="https://github.com/bekirugurr/portfolio"
@@ -88,19 +86,19 @@ const Projects = () => {
               </a>
             </div>
           </div>
-          <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
-            <h2 className="text-2xl font-bold text-center my-3">
+          <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 sm:pb-2 rounded-lg text-white flex flex-col justify-start relative">
+            <h2 className="text-2xl font-bold text-center mt-2 mb-1 sm:my-3">
               Movie Ticket App
             </h2>
-            <p className="ml-6 pl-4 pr-1 mb-6 mt-1 md:mt-3 lg:mt-0">
+            <p className="ml-6 pl-4 pr-1 mb-1 sm:mb-6 mt-1 md:mt-3 lg:mt-0">
             A  website that sells event tickets. Users can view the events, available seats for the event, claim what they want among them and see the amount they will pay. 
           </p>
-            <div className="bottom-0 w-full flex justify-center text-green-400 absolute bottom-2">
+            <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">JS</span>
               <span className="font-bold text-lg px-2 mx-1">Local Storage</span>
             </div>
 
-            <div className="text-green-400 absolute top-20 left-0 flex flex-col pt-4 gap-2">
+            <div className="text-green-400 absolute top-1 sm:top-20 left-0 flex flex-col pt-4 gap-2">
               <a
                 href="https://github.com/bekirugurr/Movie-Seat-App"
                 target="_blank"
@@ -117,19 +115,19 @@ const Projects = () => {
               </a>
             </div>
           </div>
-          <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
-            <h2 className="text-2xl font-bold text-center my-3">
+          <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 sm:pb-2 rounded-lg text-white flex flex-col justify-start relative">
+            <h2 className="text-2xl font-bold text-center  my-2 sm:my-3">
               IOS Calculator
             </h2>
-            <p className="mr-8 pr-5 ml-4 mb-6 mt-2 md:mt-4 lg:mt-2">
+            <p className="mr-8 pr-5 ml-4 my-2 sm:mb-6 sm:mt-2 md:mt-4 lg:mt-2">
             In this project, the goal is to make a functional and visual clone of the calculator of an IOS device. 
           </p>
-            <div className="bottom-0 w-full flex justify-center text-green-400 absolute bottom-2">
+            <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">Javascript</span>
               <span className="font-bold text-lg px-2 mx-1">CSS</span>
             </div>
 
-            <div className="text-green-400 absolute top-20 right-0 flex flex-col pt-4 gap-2">
+            <div className="text-green-400 absolute top-1 sm:top-20 right-0 flex flex-col pt-4 gap-2">
               <a
                 href="https://github.com/bekirugurr/Ios-Calculator"
                 target="_blank"
@@ -151,23 +149,7 @@ const Projects = () => {
           <h2 className="text-2xl font-bold text-center my-3">
             React Movie App
           </h2>
-          <p className="mx-3 my-2 lg:my-0 px-3">
-          Displays film details, posters and fragmans by using the tmdb api. There is a search feature according to the entered word. In addition, Firebase was used for register, login and authentication. 
-          </p>
-          <div className="bottom-0 w-full flex justify-center text-green-400">
-            <span className="font-bold text-lg px-2 mx-1">React</span>
-            <span className="font-bold text-lg px-2 mx-1">Context API</span>
-            <span className="font-bold text-lg px-2 mx-1">Firebase</span>
-            <span className="font-bold text-lg px-2 mx-1">Bootstrap</span>
-            <span className="font-bold text-lg px-2 mx-1">Axios</span>
-          </div>
-          <img
-            src={movieAppGif}
-            alt="movie app gif"
-            className=" border-2 border-green-400 rounded-lg h-72"
-          />
-          <FiFolder className="w-12 h-12 text-green-400 absolute top-4 left-7" />
-          <div className="text-green-400 absolute top-4 right-2 flex">
+          <div className="text-green-400 sm:absolute top-12 sm:top-4 right-2 flex sm:flex-col sm:flex-row">
             <a
               href="https://github.com/bekirugurr/firebase-movie-app"
               target="_blank"
@@ -183,8 +165,24 @@ const Projects = () => {
               <HiOutlineExternalLink className="w-8 h-8" />
             </a>
           </div>
+          <p className="mx-3 my-2 lg:my-0 px-3">
+          Displays film details, posters and fragmans by using the tmdb api. There is a search feature according to the entered word. In addition, Firebase was used for register, login and authentication. 
+          </p>
+          <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400">
+            <span className="font-bold text-lg px-2 mx-1">React</span>
+            <span className="font-bold text-lg px-2 mx-1">Context API</span>
+            <span className="font-bold text-lg px-2 mx-1">Firebase</span>
+            <span className="font-bold text-lg px-2 mx-1">Bootstrap</span>
+            <span className="font-bold text-lg px-2 mx-1">Axios</span>
+          </div>
+          <img
+            src={movieAppGif}
+            alt="movie app gif"
+            className=" border-2 border-green-400 rounded-lg h-72"
+          />
+          <FiFolder className="hidden sm:block w-12 h-12 text-green-400 absolute top-4 left-7" />
         </div>
-        <div className="grid grid-cols-2 gap-5 lg:row-start-2 lg:row-end-3  w-full h-full rounded-lg">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:row-start-2 lg:row-end-3  w-full h-full rounded-lg">
         <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center mt-3 mb-1">
               Lottery Ticket App
@@ -192,12 +190,12 @@ const Projects = () => {
             <p className="ml-6 pl-4 pr-1 mb-6 mt-2 md:mt-6 md:mb-0 lg:mb-6 lg:mt-2 ">
             Generates max 8 lottery tickets at once. The first 6 numbers will be ascending and different. The 7th (joker) number cannot be the same as previous ones. The 8th (superstar) number can be any between 1 to 90. 
           </p>
-            <div className="bottom-0 w-full flex justify-center text-green-400 absolute bottom-2">
+            <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">Javascript</span>
               <span className="font-bold text-lg px-2 mx-1">CSS</span>
             </div>
 
-            <div className="text-green-400 absolute top-20 left-0 flex flex-col pt-4 gap-2">
+            <div className="text-green-400 absolute top-1 sm:top-20 left-0 flex flex-col pt-4 gap-2">
               <a
                 href="https://github.com/bekirugurr/Lucky-Numbers-Generator"
                 target="_blank"
@@ -218,14 +216,14 @@ const Projects = () => {
             <h2 className="text-2xl font-bold text-center mt-3">
               Checkout Page
             </h2>
-            <img src={cheackOutGif} alt="cheackOutGif" className="w-10/12 h-[11rem] mt-2  border-2 border-green-400 rounded-lg"/>
+            <img src={cheackOutGif} alt="cheackOutGif" className="w-10/12 h-[11rem] mt-2  border-2 border-green-400 rounded-lg hidden sm:block"/>
             <p className="mr-8 pr-2 ml-5 pt-2 mb-4">
             A real e-commerce website's checkout page. Cart for buying products, and we can increase, decrease the number of products or remove the product. By changing a product, my js functions calculate the cart total price. 
           </p>
-            <div className="bottom-0 w-full flex flex-col justify-center items-center text-green-400 absolute bottom-2">
+            <div className="bottom-0 w-full hidden sm:flex flex-col justify-center items-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">DOM Manipulation</span>
             </div>
-            <div className="text-green-400 absolute top-48 right-0 flex flex-col pt-12 md:pt-16 lg:pt-12 gap-2">
+            <div className="text-green-400 absolute top-1 sm:top-48 right-0 flex flex-col pt-4 sm:pt-12 md:pt-16 lg:pt-12 gap-2">
               <a
                 href="https://github.com/bekirugurr/Checkout-Page-2"
                 target="_blank"
@@ -249,13 +247,13 @@ const Projects = () => {
             <p className="ml-6 pl-4 pr-1 mb-6 mt-2 md:mt-6 md:mb-0 lg:mb-6 lg:mt-2 ">
             Django as backend and django templates as frontend.  Users can add, update, delete todos and can change as done or undo. 
           </p>
-            <div className="bottom-0 w-full flex justify-center text-green-400 absolute bottom-2">
+            <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg mx-1">Django</span>
               <span className="font-bold text-lg mx-1">Bootstrap</span>
               <span className="font-bold text-lg mx-1">Crispy</span>
             </div>
 
-            <div className="text-green-400 absolute top-14 left-0 flex flex-col pt-4 gap-2">
+            <div className="text-green-400 absolute top-1 sm:top-14 left-0 flex flex-col pt-4 gap-2">
               <a
                 href="https://github.com/bekirugurr/todo-app-django"
                 target="_blank"
@@ -278,20 +276,20 @@ const Projects = () => {
             Flight Reservation API
           </h2>
           <p className="mx-3 my-1 px-3">
-          Authenticated ordinay users can create, update, delete or read reservations. Only admin users can add, update, delete or read flights. While admin user can see all reservations, authenticated ordinay users can see the reservations that they made. While admin users can see flights with their reservations others can only flight information. Also, admin user can see past and future flights, ordinary users can only see the next flights from now. Nested serializers are used.
+          Authenticated users can create, update, delete or read reservations. Only admin users can add, update, delete or read flights. While admin user can see all reservations, authenticated ordinay users can see the reservations that they made. While admin users can see flights with their reservations others can only flight information. Also, admin user can see past and future flights, ordinary users can only see the next flights from now. Nested serializers are used.
           </p>
-          <div className="bottom-0 w-full flex justify-center text-green-400">
+          <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 mb-1">
             <span className="font-bold text-lg px-2 mx-1">Django Rest API</span>
             <span className="font-bold text-lg px-2 mx-1">PostgreSQL</span>
             <span className="font-bold text-lg px-2 mx-1">Authentication</span>
           </div>
           <img
-            src={blogGif}
-            alt="blog animation"
+            src={flightAPIGif}
+            alt="flight API"
             className=" border-2 border-green-400 rounded-lg"
           />
-          <FiFolder className="w-12 h-12 text-green-400 absolute top-4 left-7" />
-          <div className="text-green-400 absolute top-4 right-2 flex">
+          <FiFolder className="hidden sm:block w-12 h-12 text-green-400 absolute top-4 left-7" />
+          <div className="text-green-400 absolute top-14 right-0 sm:top-4 sm:right-2 flex">
             <a
               href="https://github.com/bekirugurr/flight-reservation-app-django"
               target="_blank"
@@ -302,18 +300,18 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-5  items-center rounded-lg ">
-          <div className="col-span-2 h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5  items-center rounded-lg ">
+          <div className="sm:col-span-2 h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center my-3">Quiz API</h2>
             <p className="mx-3 px-3 mt-4 mb-6">
             Quiz API generates test quizzes. There are answers under questions under quizzes under categories. Admin panel was customized as nested admin panel so that the admin can enter the exam, questions and answers together. Adding, deleting and updating can be done. 
           </p>
-            <div className="bottom-0 w-full flex justify-center text-green-400 absolute bottom-2">
+            <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">Django Rest API</span>
               <span className="font-bold text-lg px-2 mx-1">PostgreSQL</span>
               <span className="font-bold text-lg px-2 mx-1">dj rest auth</span>
             </div>
-            <FiFolder className="w-12 h-12 text-green-400 absolute top-4 left-7" />
+            <FiFolder className="hidden sm:block w-12 h-12 text-green-400 absolute top-4 left-7" />
             <div className="text-green-400 absolute  top-4 right-2 flex">
               <a
                 href="https://github.com/bekirugurr/quiz-app-django"
@@ -331,12 +329,12 @@ const Projects = () => {
             <p className="ml-6 pl-4 pr-1 mb-6 ">
             It keeps a number between 1 and 100 and gives the user 7 rights to guess correctly. When user guesses wrong, application narrows range of numbers based on last guess and gives notifications about remaining rights. 
           </p>
-            <div className="bottom-0 w-full flex justify-center text-green-400 absolute bottom-2">
+            <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">Javascript</span>
               <span className="font-bold text-lg px-2 mx-1">CSS</span>
             </div>
 
-            <div className="text-green-400 absolute top-20 left-0 flex flex-col pt-4 gap-2">
+            <div className="text-green-400 absolute top-1 sm:top-20 left-0 flex flex-col pt-4 gap-2">
               <a
                 href="https://github.com/bekirugurr/Find-the-Number-Game"
                 target="_blank"
@@ -359,12 +357,12 @@ const Projects = () => {
             </h2>
             <p className="mr-6 pr-4 pl-4 mb-6">
             Adding, deleting and updating blog posts, register, login, logout and updating profile can be done. django was used for both frontend and backend. Django templates works as frontend. </p>
-            <div className="bottom-0 w-full flex justify-center text-green-400 absolute bottom-2">
+            <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">Django</span>
               <span className="font-bold text-lg px-2 mx-1">Bootstrap</span>
             </div>
 
-            <div className="text-green-400 absolute top-20 right-0 flex flex-col pt-4 gap-2">
+            <div className="text-green-400 absolute top-1 sm:top-20 right-0 flex flex-col pt-4 gap-2">
               <a
                 href="https://github.com/bekirugurr/blog-app-django"
                 target="_blank"
