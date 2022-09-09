@@ -1,8 +1,16 @@
-import { useState } from "react";
+import { useState, useId } from "react";
 import {Link} from 'react-scroll'
+import { FiMenu } from "react-icons/fi";
 
-const Navbar = () => {
+const Navbar = ({activeItem, setActiveItem}) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const id = useId();
+  const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+  const onClickItem = index => {
+    setActiveItem(index)
+    setNavbarOpen(false)
+  }
+  
   return (
       <nav className="fixed top-0 flex flex-wrap items-center justify-between px-1 md:px-2 bg-gray-200  mb-1 w-full opacity-70 z-50 font-body">
         <div className=" px-6 mx-auto flex flex-wrap items-center justify-between w-full">
@@ -11,25 +19,11 @@ const Navbar = () => {
 
               <span className="text-green-400">B </span>Ugur</Link>
             <button
-              className="text-white cursor-pointer text-xl leading-none px-2 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
+              className="text-slate-900 cursor-pointer text-xl leading-none px-2 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-                color='black'
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+              <FiMenu className="text-2xl"/>
             </button>
           </div>
           <div
@@ -39,31 +33,18 @@ const Navbar = () => {
             }
             id="example-navbar-danger"
           >
-            <ul className="flex flex-col md:flex-row list-none md:ml-auto ">
-              <li className="nav-item py-0 cursor-pointer">
-              <Link activeClass="active" smooth spy to="home" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700 " onClick={() => setNavbarOpen(false)}> 
-                Home </Link>
-              </li>
-              <li className="nav-item py-0 cursor-pointer">
-              <Link activeClass="active" smooth spy to="skills" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700" onClick={() => setNavbarOpen(false)}> 
-                Skills </Link>
-              </li>
-              <li className="nav-item py-0 cursor-pointer">
-              <Link activeClass="active" smooth spy to="projects" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700" onClick={() => setNavbarOpen(false)}> 
-                Projects </Link>
-              </li>
-              <li className="nav-item py-0 cursor-pointer">
-              <Link activeClass="active" smooth spy to="about" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700" onClick={() => setNavbarOpen(false)}> 
-                About </Link>
-              </li>
-              <li className="nav-item py-0 cursor-pointer">
-              <Link activeClass="active" smooth spy to="certificates" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700" onClick={() => setNavbarOpen(false)}> 
-                Certificates </Link>
-              </li>
-              <li className="nav-item py-0 cursor-pointer">
-              <Link activeClass="active" smooth spy to="contact" className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700" onClick={() => setNavbarOpen(false)}> 
-                Contact </Link>
-              </li>
+            <ul className="flex flex-col md:flex-row list-none md:ml-auto">
+              {['home', 'skills', 'projects', 'certificates', 'contact'].map((item,index)=>(
+                <li key={`${id}-${index}`} className="nav-item py-0 cursor-pointer">
+                {activeItem === index ? (<Link activeClass="active" smooth spy to={item} className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug text-green-700  pb-3 border-b-2 border-green-700 flex flex-col" onClick={() => onClickItem(index)}> 
+                  {capitalize(item)} 
+                  </Link>
+                  ):(
+                  <Link activeClass="active" smooth spy to={item} className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700 flex flex-col" onClick={() => onClickItem(index)}> 
+                  {capitalize(item)} 
+                  </Link>)}
+                </li>
+              ))}
             </ul>
           </div>
         </div>

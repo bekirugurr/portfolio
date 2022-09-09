@@ -7,6 +7,7 @@ import { FiFolder } from "react-icons/fi";
 import { VscGithub } from "react-icons/vsc";
 import { HiOutlineExternalLink } from "react-icons/hi";
 
+
 const Projects = () => {
   return (
     <div id="projects" className="min-h-screen pt-16 font-body mb-7">
@@ -14,7 +15,7 @@ const Projects = () => {
         Projects
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-4 lg:grid-rows-2 gap-5 mx-auto py-6 md:mx-24 lg:px-6 xl:px-24 xl:mx-9 mx-5 md:mx-10 lg:mx-0">
-        <div className="bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-between">
+        <div className="bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-evenly sm:justify-between">
           <h2 className="text-2xl font-bold text-center mt-5 sm:mb-1">Blog App</h2>
           <div className="text-green-400 sm:absolute sm:top-4 right-2 flex flex-row">
             <a
@@ -68,7 +69,7 @@ const Projects = () => {
           <div className="sm:col-span-2 h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-0 sm:pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center mt-2 mb-1 sm:my-3">Portfolio</h2>
             <p className="mx-3 px-3 mt-2 mb-3 sm:my-6 md:my-12 lg:my-6">
-            Tailwind CSS is used for styling, Framer Motion is used for motions and react scroll package is used for navigation. 
+            Fully responsive personal website. Tailwind CSS is used for styling, Framer Motion is used for motions and react scroll package is used for navigation. For smooth scrolling by navbar react-scroll is used. In Certificate page Carousel is also used. 
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">React</span>
@@ -145,11 +146,11 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="lg:col-start-2 lg:col-end-3  h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-between">
+        <div className="lg:col-start-2 lg:col-end-3  h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col  justify-evenly sm:justify-between">
           <h2 className="text-2xl font-bold text-center my-3">
             React Movie App
           </h2>
-          <div className="text-green-400 sm:absolute top-12 sm:top-4 right-2 flex sm:flex-col sm:flex-row">
+          <div className="text-green-400 sm:absolute top-12 sm:top-4 right-2 flex flex-col sm:flex-row">
             <a
               href="https://github.com/bekirugurr/firebase-movie-app"
               target="_blank"
