@@ -1,5 +1,4 @@
 import React from "react";
-import Typewriter from "typewriter-effect";
 import profilepic from "../assets/profilepic.jpg";
 import { FaLinkedinIn, FaGithub, FaRegEnvelope } from "react-icons/fa";
 

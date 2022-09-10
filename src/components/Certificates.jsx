@@ -1,5 +1,4 @@
 
-import Typewriter from 'typewriter-effect';
 const Certificates = () => {
 
   return (
