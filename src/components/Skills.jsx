@@ -26,8 +26,8 @@ const Skills = () => {
 
   return (
     <div id="skills" className="min-h-screen font-body bg-green-200 px-0 mx-0 pt-16 px-1 md:px-4 lg:px-12 pb-12 md:pb-24">
-      <h1 className="text-4xl font-bold text-gray-800 mt-4 ml-6 lg:ml-12">Skillset</h1>
-      <h3 className="text-2xl font-bold text-gray-800 mt-4 ml-6 lg:ml-12">
+      <h1 className="text-4xl font-bold text-gray-800 mt-4 text-center">Skillset</h1>
+      <h3 className="text-2xl font-bold text-gray-800 mt-4 text-center">
         Languages, libraries, frameworks and tools I use in development:
       </h3>
       <ul className="flex flex-row flex-wrap px-4 lg:px-24  mt-4 md:mt-10 mb-0 md:mb-2">

@@ -11,7 +11,7 @@ import { HiOutlineExternalLink } from "react-icons/hi";
 const Projects = () => {
   return (
     <div id="projects" className="min-h-screen pt-16 font-body mb-7">
-      <h1 className="text-4xl text-gray-800 mt-4 mx-7 md:mx-4 lg:mx-24 font-bold font-body">
+      <h1 className="text-4xl text-gray-800 mt-4 font-bold font-body text-center">
         Projects
       </h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-4 lg:grid-rows-2 gap-5 mx-auto py-6 md:mx-24 lg:px-6 xl:px-24 xl:mx-9 mx-5 md:mx-10 lg:mx-0">

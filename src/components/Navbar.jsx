@@ -34,13 +34,13 @@ const Navbar = ({activeItem, setActiveItem}) => {
             id="example-navbar-danger"
           >
             <ul className="flex flex-col md:flex-row list-none md:ml-auto">
-              {['home', 'skills', 'projects', 'certificates', 'contact'].map((item,index)=>(
+              {['home', 'skills', 'projects', 'contact'].map((item,index)=>(
                 <li key={`${id}-${index}`} className="nav-item py-0 cursor-pointer">
-                {activeItem === index ? (<Link activeClass="active" smooth spy to={item} className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug text-green-700  pb-3 border-b-2 border-green-700 flex flex-col" onClick={() => onClickItem(index)}> 
+                {activeItem === index ? (<Link activeClass="active" smooth spy to={item} className="text-gray-900 p-4 px-5 flex items-center text-lg font-medium leading-snug text-green-700  pb-3 border-b-2 border-green-700 flex flex-col" onClick={() => onClickItem(index)}> 
                   {capitalize(item)} 
                   </Link>
                   ):(
-                  <Link activeClass="active" smooth spy to={item} className="text-gray-900 p-4 px-3 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700 flex flex-col" onClick={() => onClickItem(index)}> 
+                  <Link activeClass="active" smooth spy to={item} className="text-gray-900 p-4 px-5 flex items-center text-lg font-medium leading-snug hover:text-green-700  hover:pb-3 hover:border-b-2 hover:border-green-700 flex flex-col" onClick={() => onClickItem(index)}> 
                   {capitalize(item)} 
                   </Link>)}
                 </li>
