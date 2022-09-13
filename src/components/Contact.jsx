@@ -40,7 +40,7 @@ const Contact = ({setActiveItem}) => {
         x:'120vw'
       })
     }
-  },[inView]);
+  },[inView, animationFromLeft, animationFromRight, setActiveItem]);
 
   const handleFormData = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

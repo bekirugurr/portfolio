@@ -55,7 +55,7 @@ const Projects = ({setActiveItem}) => {
       animationFromLeft3.start({...initialLeftPosition})
       animationFromRight3.start({...initialRightPosition})
     }
-  }, [inViewWrapper, inViewContainer1, inViewContainer2, inViewContainer3])
+  }, [inViewWrapper, inViewContainer1, inViewContainer2, inViewContainer3, animationFromLeft1, animationFromRight1, animationFromLeft2, animationFromRight2, animationFromLeft3, animationFromRight3, finalPosition, initialLeftPosition, initialRightPosition, setActiveItem, transition])
 
   return (
     <div ref={refWrapper} id="projects" className="min-h-screen pt-16 font-body mb-7 ">
@@ -73,7 +73,7 @@ const Projects = ({setActiveItem}) => {
           <div className="text-green-400 sm:absolute sm:top-4 right-2 flex flex-row">
             <a
               href="https://github.com/bekirugurr/react-redux-blog-app"
-              target="_blank"  rel="noalierrer"
+              target="_blank"   rel="noreferrer"
               className="flex flex-col items-center hover:text-slate-300 px-2 pb-1"
             >
               <VscGithub className="w-8 h-8" />
@@ -81,7 +81,7 @@ const Projects = ({setActiveItem}) => {
             </a>
             <a
               href="https://react-redux-blogapp.vercel.app/"
-              target="_blank"  rel="noalierrer"
+              target="_blank"   rel="noreferrer"
               className="flex flex-col items-center hover:text-slate-300 px-2 pb-1"
             >
               <HiOutlineExternalLink className="w-8 h-8" />
@@ -89,7 +89,7 @@ const Projects = ({setActiveItem}) => {
             </a>
             <a
               href="https://github.com/bekirugurr/blog-API-django"
-              target="_blank"  rel="noalierrer"
+              target="_blank"   rel="noreferrer"
               className="flex flex-col items-center hover:text-slate-300 px-2 pb-1"
             >
               <VscGithub className="w-8 h-8" />
@@ -136,7 +136,7 @@ const Projects = ({setActiveItem}) => {
             <div className="text-green-400 absolute  top-4 right-3 flex">
               <a
                 href="https://github.com/bekirugurr/portfolio"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-3 pb-1"
               >
                 <VscGithub className="w-8 h-8" />
@@ -158,14 +158,14 @@ const Projects = ({setActiveItem}) => {
             <div className="text-green-400 absolute top-1 sm:top-20 left-0 flex flex-col pt-4 gap-2">
               <a
                 href="https://github.com/bekirugurr/Movie-Seat-App"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <VscGithub className="w-8 h-8" />
               </a>
               <a
                 href="https://bugur-movieseat-app.netlify.app/"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <HiOutlineExternalLink className="w-8 h-8" />
@@ -187,14 +187,14 @@ const Projects = ({setActiveItem}) => {
             <div className="text-green-400 absolute top-1 sm:top-20 right-0 flex flex-col pt-4 gap-2">
               <a
                 href="https://github.com/bekirugurr/Ios-Calculator"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <VscGithub className="w-8 h-8" />
               </a>
               <a
                 href="https://bugur-ios-calculator.netlify.app/"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <HiOutlineExternalLink className="w-8 h-8" />
@@ -224,14 +224,14 @@ const Projects = ({setActiveItem}) => {
             <div className="text-green-400 absolute top-1 sm:top-20 left-0 flex flex-col pt-4 gap-2">
               <a
                 href="https://github.com/bekirugurr/Lucky-Numbers-Generator"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <VscGithub className="w-8 h-8" />
               </a>
               <a
                 href="https://bekirugurr.github.io/Lucky-Numbers-Generator/"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <HiOutlineExternalLink className="w-8 h-8" />
@@ -252,14 +252,14 @@ const Projects = ({setActiveItem}) => {
             <div className="text-green-400 absolute top-1 sm:top-48 right-0 flex flex-col pt-4 sm:pt-12 md:pt-16 lg:pt-12 gap-2">
               <a
                 href="https://github.com/bekirugurr/Checkout-Page-2"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <VscGithub className="w-8 h-8" />
               </a>
               <a
                 href="https://bugur-checkout.netlify.app/"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <HiOutlineExternalLink className="w-8 h-8" />
@@ -282,14 +282,14 @@ const Projects = ({setActiveItem}) => {
             <div className="text-green-400 absolute top-1 sm:top-14 left-0 flex flex-col pt-4 gap-2">
               <a
                 href="https://github.com/bekirugurr/todo-app-django"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <VscGithub className="w-8 h-8" />
               </a>
               <a
                 href="https://django-mytodo-app.herokuapp.com/"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <HiOutlineExternalLink className="w-8 h-8" />
@@ -307,14 +307,14 @@ const Projects = ({setActiveItem}) => {
           <div className="text-green-400 sm:absolute top-12 sm:top-4 right-2 flex flex-row">
             <a
               href="https://github.com/bekirugurr/firebase-movie-app"
-              target="_blank"  rel="noalierrer"
+              target="_blank"   rel="noreferrer"
               className="flex flex-col items-center hover:text-slate-300 px-3 pb-1"
             >
               <VscGithub className="w-8 h-8" />
             </a>
             <a
               href="https://bugur-firebase-movie-search-app.netlify.app/"
-              target="_blank"  rel="noalierrer"
+              target="_blank"   rel="noreferrer"
               className="flex flex-col items-center hover:text-slate-300 px-3 pb-1"
             >
               <HiOutlineExternalLink className="w-8 h-8" />
@@ -364,7 +364,7 @@ const Projects = ({setActiveItem}) => {
           <div className="text-green-400 absolute top-14 right-0 sm:top-4 sm:right-2 flex">
             <a
               href="https://github.com/bekirugurr/flight-reservation-app-django"
-              target="_blank"  rel="noalierrer"
+              target="_blank"   rel="noreferrer"
               className="flex flex-col items-center hover:text-slate-300 px-3 pb-1"
             >
               <VscGithub className="w-8 h-8" />
@@ -389,7 +389,7 @@ const Projects = ({setActiveItem}) => {
             <div className="text-green-400 absolute  top-4 right-2 flex">
               <a
                 href="https://github.com/bekirugurr/quiz-app-django"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-3 pb-1"
               >
                 <VscGithub className="w-8 h-8" />
@@ -411,14 +411,14 @@ const Projects = ({setActiveItem}) => {
             <div className="text-green-400 absolute top-1 sm:top-20 left-0 flex flex-col pt-4 gap-2">
               <a
                 href="https://github.com/bekirugurr/Find-the-Number-Game"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <VscGithub className="w-8 h-8" />
               </a>
               <a
                 href="https://bekirugurr.github.io/Find-the-Number-Game/"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <HiOutlineExternalLink className="w-8 h-8" />
@@ -439,14 +439,14 @@ const Projects = ({setActiveItem}) => {
             <div className="text-green-400 absolute top-1 sm:top-20 right-0 flex flex-col pt-4 gap-2">
               <a
                 href="https://github.com/bekirugurr/blog-app-django"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <VscGithub className="w-8 h-8" />
               </a>
               <a
                 href="https://bekirugurr.pythonanywhere.com/"
-                target="_blank"  rel="noalierrer"
+                target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <HiOutlineExternalLink className="w-8 h-8" />

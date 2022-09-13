@@ -56,7 +56,7 @@ const Skills = ({setActiveItem}) => {
         transition: {duration:0}
       })
     }
-  },[inView]);
+  },[inView, animationImage, animationText, setActiveItem]);
 
   let tools =[['HTML5',HTML5], ['CSS3', CSS3], ['Javascript',Javascript], ['React',React], ['Redux',Redux], ['Tailwind',Tailwind], ['jQuery',jQuery], ['Bootstrap',Bootstrap], ['Python',Python], ['django',django], ['Firebase',Firebase], ['Formik',Formik], ['Github',Github], ['Material UI',MaterialUI], ['PostgreSQL',PostgreSQL], ['SQLite',SQLite],  ['Heroku',Heroku], ['Styled',StyledComponent]]  
 
