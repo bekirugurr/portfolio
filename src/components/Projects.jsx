@@ -11,43 +11,63 @@ import { useInView } from "react-intersection-observer";
 
 
 const Projects = ({setActiveItem}) => {
-  const [refContainer, inViewContainer]= useInView({threshold:0.2})
-  const animationFromLeft = useAnimation()
-  const animationFromRight = useAnimation()
+  const [refWrapper, inViewWrapper]= useInView({threshold:0.2})
+  const [refContainer1, inViewContainer1]= useInView({threshold:0.2})
+  const [refContainer2, inViewContainer2]= useInView({threshold:0.2})
+  const [refContainer3, inViewContainer3]= useInView({threshold:0.2})
+  const animationFromLeft1 = useAnimation()
+  const animationFromRight1 = useAnimation()
+  const animationFromLeft2 = useAnimation()
+  const animationFromRight2 = useAnimation()
+  const animationFromLeft3 = useAnimation()
+  const animationFromRight3 = useAnimation()
+  const finalPosition={x:0}
+  const initialLeftPosition={x:'-100vw'}
+  const initialRightPosition={x:'100vw'}
+  const transition = {type:'tween', duration:0.5, ease:'easeInOut'}
 
   useEffect(() => {
-
-    if (inViewContainer) {
+    if (inViewWrapper) {
       setActiveItem(2)
-      animationFromLeft.start({
-        x:0
-      })
-      animationFromRight.start({
-        x:0
-      })
-    } 
-    if(!inViewContainer){
-      animationFromLeft.start({
-        x:'-100vw'
-      })
-      animationFromRight.start({
-        x:'100vw'
-      })
+    }     
+    
+    if (inViewContainer1) {
+      animationFromLeft1.start({...finalPosition, transition: transition})
+      animationFromRight1.start({...finalPosition,  transition: transition})
     }
-
-  }, [inViewContainer])
-  
+    if (!inViewContainer1) {
+      animationFromLeft1.start({...initialLeftPosition})
+      animationFromRight1.start({...initialRightPosition})
+    }
+    if (inViewContainer2) {
+      animationFromLeft2.start({...finalPosition,  transition: transition})
+      animationFromRight2.start({...finalPosition,  transition: transition})
+    }
+    if (!inViewContainer2) {
+      animationFromLeft2.start({...initialLeftPosition})
+      animationFromRight2.start({...initialRightPosition})
+    }
+    if (inViewContainer3) {
+      animationFromLeft3.start({...finalPosition,  transition: transition})
+      animationFromRight3.start({...finalPosition,  transition: transition})
+    }
+    if (!inViewContainer3) {
+      animationFromLeft3.start({...initialLeftPosition})
+      animationFromRight3.start({...initialRightPosition})
+    }
+  }, [inViewWrapper, inViewContainer1, inViewContainer2, inViewContainer3])
 
   return (
-    <div ref={refContainer} id="projects" className="min-h-screen pt-16 font-body mb-7 ">
-      <h1 className="text-4xl text-gray-800 mt-4 font-bold font-body text-center">
+    <div ref={refWrapper} id="projects" className="min-h-screen pt-16 font-body mb-7 ">
+      <h1 className="text-4xl text-gray-800 mt-4 font-bold font-body text-center ">
         Projects
       </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-4 lg:grid-rows-2 gap-5 mx-auto py-6 md:mx-24 lg:px-6 xl:px-24 xl:mx-9 mx-5 md:mx-10 lg:mx-0 overflow-hidden">
+      <div className="flex flex-col gap-5 mx-auto py-6 md:mx-24 lg:px-6 xl:px-24 xl:mx-9 mx-5 md:mx-10 lg:mx-0 overflow-hidden">
+
+    <div ref={refContainer1} className="flex flex-col lg:flex-row gap-5 overflow-hidden">
         <motion.div 
-        className="bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-evenly sm:justify-between"
-        animate={animationFromLeft}
-        transition={{type:'spring', duration:0.7, bounce:0, ease:'easeInOut'}}
+        className="lg:flex-1 bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-evenly sm:justify-between"
+        animate={animationFromLeft1}
         >
           <h2 className="text-2xl font-bold text-center mt-5 sm:mb-1">Blog App</h2>
           <div className="text-green-400 sm:absolute sm:top-4 right-2 flex flex-row">
@@ -76,7 +96,7 @@ const Projects = ({setActiveItem}) => {
               <p className="text-xs">Backend</p>
             </a>
           </div>
-          <p className="mx-3 my-0 sm:my-2 px-6 sm:px-3">
+          <p className="mx-3 my-2 px-6 sm:px-3">
             All blog posts display on dashboard and each post's detail display
             on detail page. Adding, deleting and updating, liking blog posts,
             making comments, register, login, logout and updating profile can be
@@ -97,11 +117,9 @@ const Projects = ({setActiveItem}) => {
           <FiFolder className="hidden sm:block w-12 h-12 text-green-400 absolute top-4 left-7" />
           
         </motion.div>
-
         <motion.div 
-        className="grid grid-cols-1 grid-rows-3 sm:grid-rows-2 sm:grid-cols-2 gap-5  items-center rounded-lg "
-        animate={animationFromRight}
-        transition={{type:'spring', duration:0.7, bounce:0, ease:'easeInOut'}}
+        className="lg:flex-1 grid grid-cols-1 grid-rows-3 sm:grid-rows-2 sm:grid-cols-2 gap-5  items-center rounded-lg "
+        animate={animationFromRight1}
         >
           <div className="sm:col-span-2 h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-0 sm:pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center mt-2 mb-1 sm:my-3">Portfolio</h2>
@@ -112,6 +130,7 @@ const Projects = ({setActiveItem}) => {
               <span className="font-bold text-lg px-2 mx-1">React</span>
               <span className="font-bold text-lg px-2 mx-1">Tailwind</span>
               <span className="font-bold text-lg px-2 mx-1">Framer Motion</span>
+              <span className="font-bold text-lg px-2 mx-1">Firebase</span>
             </div>
             <FiFolder className="hidden sm:block w-12 h-12 text-green-400 absolute top-4 left-7" />
             <div className="text-green-400 absolute  top-4 right-3 flex">
@@ -183,59 +202,19 @@ const Projects = ({setActiveItem}) => {
             </div>
           </div>
         </motion.div>
-        
+    </div>
+
+    <div ref={refContainer2} className="flex flex-col-reverse lg:flex-row gap-5 overflow-hidden">
         <motion.div 
-        className="lg:col-start-2 lg:col-end-3  h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col  justify-evenly sm:justify-between"
-        animate={animationFromRight}
-        transition={{type:'spring', duration:0.7, bounce:0, ease:'easeInOut', delay:1}}
-        >
-          <h2 className="text-2xl font-bold text-center my-3">
-            React Movie App
-          </h2>
-          <div className="text-green-400 sm:absolute top-12 sm:top-4 right-2 flex flex-col sm:flex-row">
-            <a
-              hali="https://github.com/bekirugurr/firebase-movie-app"
-              target="_blank"  rel="noalierrer"
-              className="flex flex-col items-center hover:text-slate-300 px-3 pb-1"
-            >
-              <VscGithub className="w-8 h-8" />
-            </a>
-            <a
-              hali="https://bugur-firebase-movie-search-app.netlify.app/"
-              target="_blank"  rel="noalierrer"
-              className="flex flex-col items-center hover:text-slate-300 px-3 pb-1"
-            >
-              <HiOutlineExternalLink className="w-8 h-8" />
-            </a>
-          </div>
-          <p className="mx-3 my-2 lg:my-0 px-3">
-          Displays film details, posters and fragmans by using the tmdb api. There is a search feature according to the entered word. In addition, Firebase was used for register, login and authentication. 
-          </p>
-          <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400">
-            <span className="font-bold text-lg px-2 mx-1">React</span>
-            <span className="font-bold text-lg px-2 mx-1">Context API</span>
-            <span className="font-bold text-lg px-2 mx-1">Firebase</span>
-            <span className="font-bold text-lg px-2 mx-1">Bootstrap</span>
-            <span className="font-bold text-lg px-2 mx-1">Axios</span>
-          </div>
-          <img
-            src={movieAppGif}
-            alt="movie app gif"
-            className=" border-2 border-green-400 rounded-lg h-72"
-          />
-          <FiFolder className="hidden sm:block w-12 h-12 text-green-400 absolute top-4 left-7" />
-        </motion.div>
-        <motion.div 
-        className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:row-start-2 lg:row-end-3  w-full h-full rounded-lg"
-        animate={animationFromLeft}
-        transition={{type:'spring', duration:0.7, bounce:0, ease:'easeInOut', delay:1}}
+        className="grid grid-cols-1 grid-rows-3 sm:grid-rows-2 sm:grid-cols-2 gap-5  items-center rounded-lg "
+        animate={animationFromLeft2}
         >
         <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center mt-3 mb-1">
               Lottery Ticket App
             </h2>
             <p className="ml-6 pl-4 pr-1 mb-6 mt-2 md:mt-6 md:mb-0 lg:mb-6 lg:mt-2 ">
-            Generates max 8 lottery tickets at once. The first 6 numbers will be ascending and different. The 7th (joker) number cannot be the same as previous ones. The 8th (superstar) number can be any between 1 to 90. 
+            Generates max 8 lottery tickets at once. Each ticket contains three sets of numbers: ordinary six, joker and superstar, which are produced according to a certain rule. 
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">Javascript</span>
@@ -263,8 +242,8 @@ const Projects = ({setActiveItem}) => {
             <h2 className="text-2xl font-bold text-center mt-3">
               Checkout Page
             </h2>
-            <img src={cheackOutGif} alt="cheackOutGif" className="w-10/12 h-[11rem] mt-2  border-2 border-green-400 rounded-lg hidden sm:block"/>
-            <p className="mr-8 pr-2 ml-5 pt-2 mb-4">
+            <img src={cheackOutGif} alt="cheackOutGif" className="w-10/12 h-[11rem] mt-2  border-2 border-green-400 rounded-lg "/>
+            <p className="mr-8 pr-2 ml-5 pt-2 pb-8">
             A real e-commerce website's checkout page. Cart for buying products, and we can increase, decrease the number of products or remove the product. By changing a product, my js functions calculate the cart total price. 
           </p>
             <div className="bottom-0 w-full hidden sm:flex flex-col justify-center items-center text-green-400 absolute bottom-2">
@@ -319,14 +298,56 @@ const Projects = ({setActiveItem}) => {
           </div>
         </motion.div>
         <motion.div 
-        className="bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-between"
-        animate={animationFromLeft}
-        transition={{type:'spring', duration:0.7, bounce:0, ease:'easeInOut', delay:2}}
+        className="bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-evenly sm:justify-between"
+        animate={animationFromRight2}
+        >
+          <h2 className="text-2xl font-bold text-center my-3">
+            React Movie App
+          </h2>
+          <div className="text-green-400 sm:absolute top-12 sm:top-4 right-2 flex flex-row">
+            <a
+              hali="https://github.com/bekirugurr/firebase-movie-app"
+              target="_blank"  rel="noalierrer"
+              className="flex flex-col items-center hover:text-slate-300 px-3 pb-1"
+            >
+              <VscGithub className="w-8 h-8" />
+            </a>
+            <a
+              hali="https://bugur-firebase-movie-search-app.netlify.app/"
+              target="_blank"  rel="noalierrer"
+              className="flex flex-col items-center hover:text-slate-300 px-3 pb-1"
+            >
+              <HiOutlineExternalLink className="w-8 h-8" />
+            </a>
+          </div>
+          <p className="mx-3 my-2 px-3">
+          Displays film details, posters and fragmans by using the tmdb api. There is a search feature according to the entered word. In addition, Firebase was used for register, login and authentication. 
+          </p>
+          <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400">
+            <span className="font-bold text-lg px-2 mx-1">React</span>
+            <span className="font-bold text-lg px-2 mx-1">ContextAPI</span>
+            <span className="font-bold text-lg px-2 mx-1">Firebase</span>
+            <span className="font-bold text-lg px-2 mx-1">Bootstrap</span>
+            <span className="font-bold text-lg px-2 mx-1">Axios</span>
+          </div>
+          <img
+            src={movieAppGif}
+            alt="movie app gif"
+            className=" border-2 border-green-400 rounded-lg h-72"
+          />
+          <FiFolder className="hidden sm:block w-12 h-12 text-green-400 absolute top-4 left-7" />
+        </motion.div>
+    </div>
+
+    <div ref={refContainer3} className="flex flex-col lg:flex-row gap-5 overflow-hidden">
+        <motion.div 
+        className="lg:flex-1 bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-between"
+        animate={animationFromLeft3}
         >
           <h2 className="text-2xl font-bold text-center mt-6 mb-2">
             Flight Reservation API
           </h2>
-          <p className="mx-3 my-1 px-3">
+          <p className="mx-3 my-2 px-3">
           Authenticated users can create, update, delete or read reservations. Only admin users can add, update, delete or read flights. While admin user can see all reservations, authenticated ordinay users can see the reservations that they made. While admin users can see flights with their reservations others can only flight information. Also, admin user can see past and future flights, ordinary users can only see the next flights from now. Nested serializers are used.
           </p>
           <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 mb-1">
@@ -350,11 +371,9 @@ const Projects = ({setActiveItem}) => {
             </a>
           </div>
         </motion.div>
-
         <motion.div 
-        className="grid grid-cols-1 sm:grid-cols-2 gap-5  items-center rounded-lg "
-        animate={animationFromRight}
-        transition={{type:'spring', duration:0.7, bounce:0, ease:'easeInOut', delay:2}}
+        className="lg:flex-1 grid grid-cols-1 sm:grid-cols-2 gap-5  items-center rounded-lg "
+        animate={animationFromRight3}
         >
           <div className="sm:col-span-2 h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center my-3">Quiz API</h2>
@@ -435,6 +454,9 @@ const Projects = ({setActiveItem}) => {
             </div>
           </div>
         </motion.div>
+    </div>
+
+
       </div>
     </div>
   );

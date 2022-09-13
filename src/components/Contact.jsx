@@ -17,7 +17,7 @@ const Contact = ({setActiveItem}) => {
     message: "",
   });
   
-  const [ref, inView] = useInView({ threshold: 0.5 });
+  const [ref, inView] = useInView({ threshold: 0.3 });
   const animationFromLeft = useAnimation()
   const animationFromRight = useAnimation()
 
@@ -35,10 +35,10 @@ const Contact = ({setActiveItem}) => {
     } 
     if(!inView){
       animationFromLeft.start({
-        x:'-50vw'
+        x:'-120vw'
       })
       animationFromRight.start({
-        x:'50vw'
+        x:'120vw'
       })
     }
   },[inView]);
@@ -79,8 +79,7 @@ const Contact = ({setActiveItem}) => {
         Contact
       </h1>
       <form
-        className="flex flex-col gap-5 justify-center items-center mx-auto mt-6 px-4 overflow-hidden"
-        style={{ width: "40rem" }}
+        className="flex flex-col gap-5 justify-center items-center mx-auto mt-6 px-8 sm:w-11/12 md:w-10/12 lg:w-8/12  xl:w-6/12 overflow-hidden"
         onSubmit={handleSubmit}
       >
         <motion.input 
