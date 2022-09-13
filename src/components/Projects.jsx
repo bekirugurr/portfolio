@@ -54,7 +54,7 @@ const Projects = ({setActiveItem}) => {
   }, [inViewWrapper, inViewContainer1, inViewContainer2, inViewContainer3, animationFromLeft1, animationFromRight1, animationFromLeft2, animationFromRight2, animationFromLeft3, animationFromRight3, setActiveItem])
 
   return (
-    <div ref={refWrapper} id="projects" className="min-h-screen pt-16 font-body pb-7 bg-red-50">
+    <div ref={refWrapper} id="projects" className="min-h-screen pt-16 font-body pb-7 bg-fuchsia-50">
       <h1 className="text-4xl text-gray-800 mt-4 font-bold font-body text-center ">
         Projects
       </h1>

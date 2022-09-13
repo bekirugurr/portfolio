@@ -17,7 +17,7 @@ const Home = ({ setActiveItem }) => {
     <div
       ref={ref}
       id="home"
-      className="min-h-screen flex items-center bg-blue-50 md:px-10"
+      className="min-h-screen flex items-center bg-fuchsia-50 md:px-10"
     >
       <div className="flex flex-row flex-wrap md:flex-nowrap pl-12 md:pl-24 lg:pl-36 pr-12 lg:pr-36 sm:gap-none md:gap-14 justify-center items-center pb-0 md:pb-7 overflow-hidden md:ml-6">
         <motion.img
