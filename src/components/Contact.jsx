@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import firebase from "../utils/firebase"
 import {
   getDatabase,
@@ -6,14 +6,42 @@ import {
   push,
   set,
 } from "firebase/database";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
 
-const Contact = () => {
 
-  const [formData, setFormData] = useState({
+const Contact = ({setActiveItem}) => {
+    const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+  
+  const [ref, inView] = useInView({ threshold: 0.5 });
+  const animationFromLeft = useAnimation()
+  const animationFromRight = useAnimation()
+
+  useEffect(() => {
+    if (inView) {
+      setActiveItem(3);
+      animationFromLeft.start({
+        x:0,
+        transition:{type:'spring', duration:1, bounce:0.5, ease:'easeInOut', delay:0.2}
+      })
+      animationFromRight.start({
+        x:0,
+        transition:{type:'spring', duration:1, bounce:0.5, ease:'easeInOut', delay:0.2}
+      })
+    } 
+    if(!inView){
+      animationFromLeft.start({
+        x:'-50vw'
+      })
+      animationFromRight.start({
+        x:'50vw'
+      })
+    }
+  },[inView]);
 
   const handleFormData = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -46,32 +74,35 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="h-screen pt-16">
+    <div ref={ref} id="contact" className="h-screen pt-16">
       <h1 className="text-4xl font-bold text-gray-800 mt-4 text-center">
         Contact
       </h1>
       <form
-        className="flex flex-col gap-5 justify-center items-center mx-auto mt-6"
+        className="flex flex-col gap-5 justify-center items-center mx-auto mt-6 px-4 overflow-hidden"
         style={{ width: "40rem" }}
         onSubmit={handleSubmit}
       >
-        <input
+        <motion.input 
           type="text"
           className="text-slate-600 placeholder-slate-600 font-semibold py-3 px-4 border-2 border-slate-600 rounded-xl bg-transparent w-full"
           placeholder="Name"
           name="name"
           value={formData.name}
           onChange={handleFormData}
+          animate={animationFromLeft}
+          
         />
-        <input
+        <motion.input
           type="text"
           className="text-slate-600 placeholder-slate-600 font-semibold py-3 px-5 border-2 border-slate-600 rounded-xl bg-transparent w-full"
           placeholder="E-mail"
           name="email"
           value={formData.email}
           onChange={handleFormData}
+          animate={animationFromRight}
         />
-        <textarea
+        <motion.textarea
           cols="30"
           rows="10"
           className="text-slate-600 placeholder-slate-600 font-semibold py-3 px-5 border-2 border-slate-600 rounded-xl bg-transparent w-full resize-none"
@@ -79,11 +110,13 @@ const Contact = () => {
           name="message"
           value={formData.message}
           onChange={handleFormData}
-        ></textarea>
-        <input
+          animate={animationFromLeft}
+        ></motion.textarea>
+        <motion.input
           type="submit"
           value="Send"
           className="bg-green-500 text-white px-16 py-2 text-lg rounded-3xl font-semibold"
+          animate={animationFromRight}
         />
       </form>
     </div>
