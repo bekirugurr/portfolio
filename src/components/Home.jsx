@@ -17,19 +17,19 @@ const Home = ({ setActiveItem }) => {
     <div
       ref={ref}
       id="home"
-      className="min-h-screen flex items-center bg-blue-50"
+      className="min-h-screen flex items-center bg-blue-50 md:px-10"
     >
-      <div className="flex flex-row flex-wrap md:flex-nowrap pl-12 md:pl-24 lg:pl-36 pr-12 lg:pr-36 sm:gap-none md:gap-12 justify-center items-center pb-0 md:pb-7 overflow-hidden md:ml-12">
+      <div className="flex flex-row flex-wrap md:flex-nowrap pl-12 md:pl-24 lg:pl-36 pr-12 lg:pr-36 sm:gap-none md:gap-14 justify-center items-center pb-0 md:pb-7 overflow-hidden md:ml-6">
         <motion.img
           src={profilepic}
           alt="bekir's_photo"
-          className="w-48 h-48 md:w-72 md:h-72 lg:w-72 lg:h-72 rounded-3xl bg-green-300 "
+          className="w-48 h-48 md:w-64 md:h-64 lg:w-64 lg:h-64 rounded-3xl bg-green-300 "
           initial={{ x: "-30vw", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: "tween", duration: 0.7, ease: "easeOut" }}
         />
 
-        <div className="flex flex-col gap-2 mt-8 md:-mt-4 lg:mt-0 overflow-hidden">
+        <div className="flex flex-col gap-1 mt-8 md:-mt-4 lg:mt-0 overflow-hidden">
           <motion.h2
             className="text-2xl text-gray-800 text-center md:text-left font-bold"
             initial={{ y: 10, opacity: 0 }}
@@ -58,7 +58,7 @@ const Home = ({ setActiveItem }) => {
           </motion.h1>
 
           <motion.p
-            className="text-lg text-gray-800 text-center md:text-left mt-2 px-4 md:px-0"
+            className="text-lg text-gray-800 text-center md:text-left mt-1 px-4 md:px-0"
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{
@@ -74,7 +74,7 @@ const Home = ({ setActiveItem }) => {
             learning & exploring other technologies.
           </motion.p>
 
-          <ul className="flex gap-6 justify-center md:justify-start mt-3 pb-1 md:">
+          <ul className="flex gap-6 justify-center md:justify-start mt-2 pb-1 md:">
             <motion.li
               className="w-12 h-12 rounded-full bg-gray-600 transition duration-150  hover:bg-gray-800 hover:ease-in-out flex justify-center items-center"
               initial={{ scale: 0.5, x: 70, opacity: 0 }}

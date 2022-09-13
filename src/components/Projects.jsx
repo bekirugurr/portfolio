@@ -54,45 +54,47 @@ const Projects = ({setActiveItem}) => {
   }, [inViewWrapper, inViewContainer1, inViewContainer2, inViewContainer3, animationFromLeft1, animationFromRight1, animationFromLeft2, animationFromRight2, animationFromLeft3, animationFromRight3, setActiveItem])
 
   return (
-    <div ref={refWrapper} id="projects" className="min-h-screen pt-16 font-body mb-7 ">
+    <div ref={refWrapper} id="projects" className="min-h-screen pt-16 font-body pb-7 bg-red-50">
       <h1 className="text-4xl text-gray-800 mt-4 font-bold font-body text-center ">
         Projects
       </h1>
-      <div className="flex flex-col gap-5 mx-auto py-6 md:mx-24 lg:px-6 xl:px-24 xl:mx-9 mx-5 md:mx-10 lg:mx-0 overflow-hidden">
+      <div className="flex flex-col gap-5 mx-auto py-6 md:mx-24 lg:px-6 xl:px-24 xl:mx-9 mx-5 md:mx-10 lg:mx-24 overflow-hidden">
 
     <div ref={refContainer1} className="flex flex-col lg:flex-row gap-5 overflow-hidden">
         <motion.div 
         className="lg:flex-1 bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-evenly sm:justify-between"
         animate={animationFromLeft1}
         >
-          <h2 className="text-2xl font-bold text-center mt-5 sm:mb-1">Blog App</h2>
-          <div className="text-green-400 sm:absolute sm:top-4 right-2 flex flex-row">
+          <h2 className="text-2xl font-bold text-center mt-5 sm:mb-1 lg:pr-14">Blog App</h2>
+          <div className="text-green-400 absolute top-4 right-2 left-2 flex flex-row  justify-between sm:justify-end">
+            <div className="p-0 m-0 flex">
             <a
               href="https://github.com/bekirugurr/react-redux-blog-app"
               target="_blank"   rel="noreferrer"
-              className="flex flex-col items-center hover:text-slate-300 px-2 pb-1"
+              className="flex flex-col items-center hover:text-slate-300 sm:px-1 pb-1"
             >
               <VscGithub className="w-8 h-8" />
               <p className="text-xs">Frontend</p>
             </a>
             <a
-              href="https://react-redux-blogapp.vercel.app/"
-              target="_blank"   rel="noreferrer"
-              className="flex flex-col items-center hover:text-slate-300 px-2 pb-1"
-            >
-              <HiOutlineExternalLink className="w-8 h-8" />
-              <p className="text-xs">Project</p>
-            </a>
-            <a
               href="https://github.com/bekirugurr/blog-API-django"
               target="_blank"   rel="noreferrer"
-              className="flex flex-col items-center hover:text-slate-300 px-2 pb-1"
+              className="flex flex-col items-center hover:text-slate-300 px-1 pb-1 "
             >
               <VscGithub className="w-8 h-8" />
               <p className="text-xs">Backend</p>
             </a>
+            </div>
+            <a
+              href="https://react-redux-blogapp.vercel.app/"
+              target="_blank"   rel="noreferrer"
+              className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
+            >
+              <HiOutlineExternalLink className="w-8 h-8" />
+              <p className="text-xs">Project</p>
+            </a>
           </div>
-          <p className="mx-3 my-2 px-6 sm:px-3">
+          <p className="mx-3 my-3 px-6 sm:px-3">
             All blog posts display on dashboard and each post's detail display
             on detail page. Adding, deleting and updating, liking blog posts,
             making comments, register, login, logout and updating profile can be
@@ -102,8 +104,8 @@ const Projects = ({setActiveItem}) => {
           <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400">
             <span className="font-bold text-lg px-2 mx-1">React</span>
             <span className="font-bold text-lg px-2 mx-1">Redux</span>
-            <span className="font-bold text-lg px-2 mx-1">Material UI</span>
-            <span className="font-bold text-lg px-2 mx-1">Django Rest API</span>
+            <span className="font-bold text-lg px-2 mx-1">Material </span>
+            <span className="font-bold text-lg px-2 mx-1">Django </span>
           </div>
           <img
             src={blogGif}
@@ -120,10 +122,9 @@ const Projects = ({setActiveItem}) => {
           <div className="sm:col-span-2 h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-0 sm:pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center mt-2 mb-1 sm:my-3">Portfolio</h2>
             <p className="mx-3 px-3 mt-2 mb-3 sm:my-6 md:my-12 lg:my-6">
-            Fully responsive personal website. Tailwind CSS is used for styling, Framer Motion is used for motions and react scroll package is used for navigation. For smooth scrolling by navbar react-scroll is used. In Certificate page Carousel is also used. 
+            Tailwind CSS is used for styling, Framer Motion is used for motions and react scroll package is used for navigation. For smooth scrolling by navbar react-scroll is used. In Certificate page Carousel is also used. 
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
-              <span className="font-bold text-lg px-2 mx-1">React</span>
               <span className="font-bold text-lg px-2 mx-1">Tailwind</span>
               <span className="font-bold text-lg px-2 mx-1">Framer Motion</span>
               <span className="font-bold text-lg px-2 mx-1">Firebase</span>
@@ -139,15 +140,14 @@ const Projects = ({setActiveItem}) => {
               </a>
             </div>
           </div>
-          <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 sm:pb-2 rounded-lg text-white flex flex-col justify-start relative">
+          <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative sm:pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center mt-2 mb-1 sm:my-3">
-              Movie Ticket App
+              Film Ticket App
             </h2>
-            <p className="ml-6 pl-4 pr-1 mb-1 sm:mb-6 mt-1 md:mt-3 lg:mt-0">
-            A  website that sells event tickets. Users can view the events, available seats for the event, claim what they want among them and see the amount they will pay. 
+            <p className="ml-8 pl-4 mr-2 mb-1 sm:mb-6 mt-1 md:mt-3 lg:mt-0">
+            Users can view films, available seats, choose among them and see the amount they will pay. 
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
-              <span className="font-bold text-lg px-2 mx-1">JS</span>
               <span className="font-bold text-lg px-2 mx-1">Local Storage</span>
             </div>
 
@@ -172,8 +172,8 @@ const Projects = ({setActiveItem}) => {
             <h2 className="text-2xl font-bold text-center  my-2 sm:my-3">
               IOS Calculator
             </h2>
-            <p className="mr-8 pr-5 ml-4 my-2 sm:mb-6 sm:mt-2 md:mt-4 lg:mt-2">
-            In this project, the goal is to make a functional and visual clone of the calculator of an IOS device. 
+            <p className="mr-8 pr-2 ml-4 my-2 sm:mb-6 sm:mt-2 md:mt-4 lg:mt-2">
+            A functional and visual clone of the calculator of an IOS device. 
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">Javascript</span>
@@ -202,14 +202,14 @@ const Projects = ({setActiveItem}) => {
 
     <div ref={refContainer2} className="flex flex-col-reverse lg:flex-row gap-5 overflow-hidden">
         <motion.div 
-        className="grid grid-cols-1 grid-rows-3 sm:grid-rows-2 sm:grid-cols-2 gap-5  items-center rounded-lg "
+        className="grid grid-cols-1 grid-rows-3 sm:grid-rows-2 sm:grid-cols-2 gap-5  items-center rounded-lg lg:w-7/12"
         animate={animationFromLeft2}
         >
-        <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
+        <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative  pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center mt-3 mb-1">
-              Lottery Ticket App
+              Lottery App
             </h2>
-            <p className="ml-6 pl-4 pr-1 mb-6 mt-2 md:mt-6 md:mb-0 lg:mb-6 lg:mt-2 ">
+            <p className="ml-10  mr-1 mb-6 mt-2 md:mt-6 md:mb-0 lg:mb-6 lg:mt-2 ">
             Generates max 8 lottery tickets at once. Each ticket contains three sets of numbers: ordinary six, joker and superstar, which are produced according to a certain rule. 
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
@@ -238,8 +238,8 @@ const Projects = ({setActiveItem}) => {
             <h2 className="text-2xl font-bold text-center mt-3">
               Checkout Page
             </h2>
-            <img src={cheackOutGif} alt="cheackOutGif" className="w-10/12 h-[11rem] mt-2  border-2 border-green-400 rounded-lg "/>
-            <p className="mr-8 pr-2 ml-5 pt-2 pb-8">
+            <img src={cheackOutGif} alt="cheackOutGif" className="w-8/12 sm:w-9/12 h-[16rem] sm:h-[12rem] mt-2  border-2 border-green-400 rounded-lg my-2"/>
+            <p className="mr-8 ml-3 pt-2 pb-8">
             A real e-commerce website's checkout page. Cart for buying products, and we can increase, decrease the number of products or remove the product. By changing a product, my js functions calculate the cart total price. 
           </p>
             <div className="bottom-0 w-full hidden sm:flex flex-col justify-center items-center text-green-400 absolute bottom-2">
@@ -262,17 +262,16 @@ const Projects = ({setActiveItem}) => {
               </a>
             </div>
           </div>
-          <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
+          <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center mt-3 ">
               To Do App
             </h2>
-            <p className="ml-6 pl-4 pr-1 mb-6 mt-2 md:mt-6 md:mb-0 lg:mb-6 lg:mt-2 ">
+            <p className="ml-11 mr-1 mb-6 mt-2 md:mt-6 md:mb-0 lg:mb-6 lg:mt-2 ">
             Django as backend and django templates as frontend.  Users can add, update, delete todos and can change as done or undo. 
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg mx-1">Django</span>
               <span className="font-bold text-lg mx-1">Bootstrap</span>
-              <span className="font-bold text-lg mx-1">Crispy</span>
             </div>
 
             <div className="text-green-400 absolute top-1 sm:top-14 left-0 flex flex-col pt-4 gap-2">
@@ -294,13 +293,13 @@ const Projects = ({setActiveItem}) => {
           </div>
         </motion.div>
         <motion.div 
-        className="bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-evenly sm:justify-between"
+        className="bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-evenly sm:justify-between lg:w-5/12"
         animate={animationFromRight2}
         >
-          <h2 className="text-2xl font-bold text-center my-3">
-            React Movie App
+          <h2 className="text-2xl font-bold text-center my-3 lg:pr-4">
+            Movie App
           </h2>
-          <div className="text-green-400 sm:absolute top-12 sm:top-4 right-2 flex flex-row">
+          <div className="text-green-400 absolute top-4 right-2 left-2 flex flex-row justify-between sm:justify-end">
             <a
               href="https://github.com/bekirugurr/firebase-movie-app"
               target="_blank"   rel="noreferrer"
@@ -320,11 +319,9 @@ const Projects = ({setActiveItem}) => {
           Displays film details, posters and fragmans by using the tmdb api. There is a search feature according to the entered word. In addition, Firebase was used for register, login and authentication. 
           </p>
           <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400">
-            <span className="font-bold text-lg px-2 mx-1">React</span>
             <span className="font-bold text-lg px-2 mx-1">ContextAPI</span>
             <span className="font-bold text-lg px-2 mx-1">Firebase</span>
             <span className="font-bold text-lg px-2 mx-1">Bootstrap</span>
-            <span className="font-bold text-lg px-2 mx-1">Axios</span>
           </div>
           <img
             src={movieAppGif}
@@ -340,16 +337,15 @@ const Projects = ({setActiveItem}) => {
         className="lg:flex-1 bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-between"
         animate={animationFromLeft3}
         >
-          <h2 className="text-2xl font-bold text-center mt-6 mb-2">
+          <h2 className="text-2xl font-bold text-center mt-6 mb-2 lg:pl-2">
             Flight Reservation API
           </h2>
           <p className="mx-3 my-2 px-3">
           Authenticated users can create, update, delete or read reservations. Only admin users can add, update, delete or read flights. While admin user can see all reservations, authenticated ordinay users can see the reservations that they made. While admin users can see flights with their reservations others can only flight information. Also, admin user can see past and future flights, ordinary users can only see the next flights from now. Nested serializers are used.
           </p>
           <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 mb-1">
-            <span className="font-bold text-lg px-2 mx-1">Django Rest API</span>
+            <span className="font-bold text-lg px-2 mx-1">Django Rest Framework</span>
             <span className="font-bold text-lg px-2 mx-1">PostgreSQL</span>
-            <span className="font-bold text-lg px-2 mx-1">Authentication</span>
           </div>
           <img
             src={flightAPIGif}
@@ -357,11 +353,11 @@ const Projects = ({setActiveItem}) => {
             className=" border-2 border-green-400 rounded-lg"
           />
           <FiFolder className="hidden sm:block w-12 h-12 text-green-400 absolute top-4 left-7" />
-          <div className="text-green-400 absolute top-14 right-0 sm:top-4 sm:right-2 flex">
+          <div className="text-green-400 absolute right-0 top-6 sm:top-4 sm:right-2 flex">
             <a
               href="https://github.com/bekirugurr/flight-reservation-app-django"
               target="_blank"   rel="noreferrer"
-              className="flex flex-col items-center hover:text-slate-300 px-3 pb-1"
+              className="flex flex-col items-center hover:text-slate-300 px-2 sm:px-3 pb-1"
             >
               <VscGithub className="w-8 h-8" />
             </a>
@@ -377,8 +373,7 @@ const Projects = ({setActiveItem}) => {
             Quiz API generates test quizzes. There are answers under questions under quizzes under categories. Admin panel was customized as nested admin panel so that the admin can enter the exam, questions and answers together. Adding, deleting and updating can be done. 
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
-              <span className="font-bold text-lg px-2 mx-1">Django Rest API</span>
-              <span className="font-bold text-lg px-2 mx-1">PostgreSQL</span>
+              <span className="font-bold text-lg px-2 mx-1">Django Rest Framework</span>
               <span className="font-bold text-lg px-2 mx-1">dj rest auth</span>
             </div>
             <FiFolder className="hidden sm:block w-12 h-12 text-green-400 absolute top-4 left-7" />
@@ -392,12 +387,12 @@ const Projects = ({setActiveItem}) => {
               </a>
             </div>
           </div>
-          <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
+          <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative  pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center my-3">
-              Find Number Game
+              Number Game
             </h2>
-            <p className="ml-6 pl-4 pr-1 mb-6 ">
-            It keeps a number between 1 and 100 and gives the user 7 rights to guess correctly. When user guesses wrong, application narrows range of numbers based on last guess and gives notifications about remaining rights. 
+            <p className="ml-10  mr-1 mb-6 ">
+            Keeps a number between 1 and 100. User has 7 rights to. When user is wrong, app narrows range of numbers based on last guess and gives notifications about remaining rights. 
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">Javascript</span>
@@ -423,10 +418,10 @@ const Projects = ({setActiveItem}) => {
           </div>
           <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center my-3 px-2">
-              Django Blog App 
+              Django Blog 
             </h2>
-            <p className="mr-6 pr-4 pl-4 mb-6">
-            Adding, deleting and updating blog posts, register, login, logout and updating profile can be done. django was used for both frontend and backend. Django templates works as frontend. </p>
+            <p className="mr-8 mr-4 mb-6">
+            Adding, deleting and updating blog posts, register, login and updating profile can be done. django was used for frontend (django templates) and backend. </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">Django</span>
               <span className="font-bold text-lg px-2 mx-1">Bootstrap</span>

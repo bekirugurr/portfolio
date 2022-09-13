@@ -73,12 +73,12 @@ const Contact = ({setActiveItem}) => {
   };
 
   return (
-    <div ref={ref} id="contact" className="h-screen pt-16">
+    <div ref={ref} id="contact" className="h-screen pt-16  lg:bg-yellow-50 md:px-6 lg:px-16">
       <h1 className="text-4xl font-bold text-gray-800 mt-4 text-center">
         Contact
       </h1>
       <form
-        className="flex flex-col gap-5 justify-center items-center mx-auto mt-6 px-8 sm:w-11/12 md:w-10/12 lg:w-8/12  xl:w-6/12 overflow-hidden"
+        className="flex flex-col gap-3 justify-center items-center mx-auto mt-4 px-8  sm:w-10/12 md:w-9/12 lg:w-7/12  xl:w-6/12 overflow-hidden"
         onSubmit={handleSubmit}
       >
         <motion.input 
