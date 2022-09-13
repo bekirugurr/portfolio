@@ -55,7 +55,7 @@ const Projects = ({setActiveItem}) => {
       animationFromLeft3.start({...initialLeftPosition})
       animationFromRight3.start({...initialRightPosition})
     }
-  }, [inViewWrapper, inViewContainer1, inViewContainer2, inViewContainer3, animationFromLeft1, animationFromRight1, animationFromLeft2, animationFromRight2, animationFromLeft3, animationFromRight3, setActiveItem])
+  }, [inViewWrapper, inViewContainer1, inViewContainer2, inViewContainer3, animationFromLeft1, animationFromRight1, animationFromLeft2, animationFromRight2, animationFromLeft3, animationFromRight3, setActiveItem, finalPosition, initialLeftPosition, initialRightPosition, transition])
 
   return (
     <div ref={refWrapper} id="projects" className="min-h-screen pt-16 font-body mb-7 ">
