@@ -21,10 +21,6 @@ const Projects = ({setActiveItem}) => {
   const animationFromRight2 = useAnimation()
   const animationFromLeft3 = useAnimation()
   const animationFromRight3 = useAnimation()
-  const finalPosition={x:0}
-  const initialLeftPosition={x:'-100vw'}
-  const initialRightPosition={x:'100vw'}
-  const transition = {type:'tween', duration:0.5, ease:'easeInOut'}
 
   useEffect(() => {
     if (inViewWrapper) {
@@ -32,30 +28,30 @@ const Projects = ({setActiveItem}) => {
     }     
     
     if (inViewContainer1) {
-      animationFromLeft1.start({...finalPosition, transition: transition})
-      animationFromRight1.start({...finalPosition,  transition: transition})
+      animationFromLeft1.start({x:0, transition: {type:'tween', duration:0.5, ease:'easeInOut'}})
+      animationFromRight1.start({x:0,  transition: {type:'tween', duration:0.5, ease:'easeInOut'}})
     }
     if (!inViewContainer1) {
-      animationFromLeft1.start({...initialLeftPosition})
-      animationFromRight1.start({...initialRightPosition})
+      animationFromLeft1.start({x:'-100vw'})
+      animationFromRight1.start({x:'100vw'})
     }
     if (inViewContainer2) {
-      animationFromLeft2.start({...finalPosition,  transition: transition})
-      animationFromRight2.start({...finalPosition,  transition: transition})
+      animationFromLeft2.start({x:0,  transition: {type:'tween', duration:0.5, ease:'easeInOut'}})
+      animationFromRight2.start({x:0,  transition: {type:'tween', duration:0.5, ease:'easeInOut'}})
     }
     if (!inViewContainer2) {
-      animationFromLeft2.start({...initialLeftPosition})
-      animationFromRight2.start({...initialRightPosition})
+      animationFromLeft2.start({x:'-100vw'})
+      animationFromRight2.start({x:'100vw'})
     }
     if (inViewContainer3) {
-      animationFromLeft3.start({...finalPosition,  transition: transition})
-      animationFromRight3.start({...finalPosition,  transition: transition})
+      animationFromLeft3.start({x:0,  transition: {type:'tween', duration:0.5, ease:'easeInOut'}})
+      animationFromRight3.start({x:0,  transition: {type:'tween', duration:0.5, ease:'easeInOut'}})
     }
     if (!inViewContainer3) {
-      animationFromLeft3.start({...initialLeftPosition})
-      animationFromRight3.start({...initialRightPosition})
+      animationFromLeft3.start({x:'-100vw'})
+      animationFromRight3.start({x:'100vw'})
     }
-  }, [inViewWrapper, inViewContainer1, inViewContainer2, inViewContainer3, animationFromLeft1, animationFromRight1, animationFromLeft2, animationFromRight2, animationFromLeft3, animationFromRight3, setActiveItem, finalPosition, initialLeftPosition, initialRightPosition, transition])
+  }, [inViewWrapper, inViewContainer1, inViewContainer2, inViewContainer3, animationFromLeft1, animationFromRight1, animationFromLeft2, animationFromRight2, animationFromLeft3, animationFromRight3, setActiveItem])
 
   return (
     <div ref={refWrapper} id="projects" className="min-h-screen pt-16 font-body mb-7 ">
