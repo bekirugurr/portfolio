@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import firebase from "../utils/firebase"
 import {
   getDatabase,
-  ref,
   push,
   set,
 } from "firebase/database";
