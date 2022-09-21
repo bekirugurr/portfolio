@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import blogGif from "../assets/blog_animation.gif";
 import cheackOutGif from "../assets/checkout.gif";
 import movieAppGif from "../assets/movieApp.gif";
+import todoGif from "../assets/todo.gif";
 import flightAPIGif from "../assets/flightAPI.gif";
 import { FiFolder } from "react-icons/fi";
 import { VscGithub } from "react-icons/vsc";
@@ -120,32 +121,41 @@ const Projects = ({setActiveItem}) => {
         animate={animationFromRight1}
         >
           <div className="sm:col-span-2 h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-0 sm:pb-2 rounded-lg text-white flex flex-col justify-start relative">
-            <h2 className="text-2xl font-bold text-center mt-2 mb-1 sm:my-3">Portfolio</h2>
-            <p className="mx-3 px-3 mt-2 mb-3 sm:my-6 md:my-12 lg:my-6">
-            Tailwind CSS is used for styling, Framer Motion is used for motions and react scroll package is used for navigation. For smooth scrolling by navbar react-scroll is used. In Certificate page Carousel is also used. 
-          </p>
-            <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
+            <h2 className="text-2xl font-bold text-center mt-2 mb-1 sm:my-2">React Todo App</h2>
+            <div className="ml-4 mr-1  mt-0.5 mb-3 sm:mt-6 sm:mb-6 md:mt-6 md:mb-12  lg:mt-3  lg:mb-6 flex flex-row gap-2">
+            <p className="pl-1 flex flex-row items-center">
+            User can add task , mark tasks as completed or uncompleted and delete them. </p> 
+            <img src={todoGif} alt="todo" className="h-[9rem] border-2 border-green-400 rounded-lg  " />
+          </div>
+            <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-1 mt-2">
               <span className="font-bold text-lg px-2 mx-1">Tailwind</span>
-              <span className="font-bold text-lg px-2 mx-1">Framer Motion</span>
-              <span className="font-bold text-lg px-2 mx-1">Firebase</span>
+              <span className="font-bold text-lg px-2 mx-1">Rest API</span>
+              <span className="font-bold text-lg px-2 mx-1">Toastify</span>
             </div>
             <FiFolder className="hidden sm:block w-12 h-12 text-green-400 absolute top-4 left-7" />
-            <div className="text-green-400 absolute  top-4 right-3 flex">
-              <a
-                href="https://github.com/bekirugurr/portfolio"
-                target="_blank"   rel="noreferrer"
-                className="flex flex-col items-center hover:text-slate-300 px-3 pb-1"
-              >
-                <VscGithub className="w-8 h-8" />
-              </a>
-            </div>
+            <div className="text-green-400 absolute top-4 right-2 left-2 flex flex-row justify-between sm:justify-end">
+            <a
+              href="https://github.com/bekirugurr/React-Todo-App"
+              target="_blank"   rel="noreferrer"
+              className="flex flex-col items-center hover:text-slate-300 px-2 pb-1"
+            >
+              <VscGithub className="w-8 h-8" />
+            </a>
+            <a
+              href="https://todo-bkr.netlify.app/"
+              target="_blank"   rel="noreferrer"
+              className="flex flex-col items-center hover:text-slate-300 px-2 pb-1"
+            >
+              <HiOutlineExternalLink className="w-8 h-8" />
+            </a>
+          </div>
           </div>
           <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative sm:pb-2 rounded-lg text-white flex flex-col justify-start relative">
-            <h2 className="text-2xl font-bold text-center mt-2 mb-1 sm:my-3">
+            <h2 className="text-2xl font-bold text-center mt-2 mb-1 sm:mt-3 sm:mb-2">
               Film Ticket App
             </h2>
-            <p className="ml-8 pl-4 mr-2 mb-1 sm:mb-6 mt-1 md:mt-3 lg:mt-0">
-            Users can view films, available seats, choose among them and see the amount they will pay. 
+            <p className="ml-8 pl-4 mr-2 mb-1  mt-5 sm:mb-6 sm:mt-4 md:mt-6 lg:mt-0">
+            App sells event tickets. Users can view events, available seats, claim what they want among them and see the amount they will pay. 
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">Local Storage</span>
@@ -172,8 +182,8 @@ const Projects = ({setActiveItem}) => {
             <h2 className="text-2xl font-bold text-center  my-2 sm:my-3">
               IOS Calculator
             </h2>
-            <p className="mr-8 pr-2 ml-4 my-2 sm:mb-6 sm:mt-2 md:mt-4 lg:mt-2">
-            A functional and visual clone of the calculator of an IOS device. 
+            <p className="mr-8 pr-2 ml-4 mb-1 mt-6 sm:mb-6 sm:mt-5 md:mt-7 lg:mt-2">
+            A functional and visual clone of the calculator of an IOS device for arithmetic operations. 
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">Javascript</span>
@@ -207,30 +217,23 @@ const Projects = ({setActiveItem}) => {
         >
         <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative  pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center mt-3 mb-1">
-              Lottery App
+            Portfolio
             </h2>
             <p className="ml-10  mr-1 mb-6 mt-2 md:mt-6 md:mb-0 lg:mb-6 lg:mt-2 ">
-            Generates max 8 lottery tickets at once. Each ticket contains three sets of numbers: ordinary six, joker and superstar, which are produced according to a certain rule. 
+            Responsive personel website. Tailwind was used. Framer Motion and react_scroll are used for transition. Firebase realtime database was used for sending message
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
-              <span className="font-bold text-lg px-2 mx-1">Javascript</span>
-              <span className="font-bold text-lg px-2 mx-1">CSS</span>
+            <span className="font-bold text-lg mx-1">React</span>
+              <span className="font-bold text-lg mx-1">Tailwind</span>
             </div>
 
-            <div className="text-green-400 absolute top-1 sm:top-20 left-0 flex flex-col pt-4 gap-2">
-              <a
-                href="https://github.com/bekirugurr/Lucky-Numbers-Generator"
+            <div className="text-green-400 absolute top-1 sm:top-20 lg:top-22 left-0 flex flex-col pt-5 gap-2">
+            <a
+                href="https://github.com/bekirugurr/portfolio"
                 target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <VscGithub className="w-8 h-8" />
-              </a>
-              <a
-                href="https://bekirugurr.github.io/Lucky-Numbers-Generator/"
-                target="_blank"   rel="noreferrer"
-                className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
-              >
-                <HiOutlineExternalLink className="w-8 h-8" />
               </a>
             </div>
           </div>
@@ -264,26 +267,26 @@ const Projects = ({setActiveItem}) => {
           </div>
           <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center mt-3 ">
-              To Do App
+              Lottery App
             </h2>
             <p className="ml-11 mr-1 mb-6 mt-2 md:mt-6 md:mb-0 lg:mb-6 lg:mt-2 ">
-            Django as backend and django templates as frontend.  Users can add, update, delete todos and can change as done or undo. 
+            Generates max 8 lottery tickets at once. Each ticket contains three sets of numbers: ordinary six, joker and superstar, which are produced according to a certain rule. 
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
-              <span className="font-bold text-lg mx-1">Django</span>
-              <span className="font-bold text-lg mx-1">Bootstrap</span>
+              <span className="font-bold text-lg px-2 mx-1">Javascript</span>
+              <span className="font-bold text-lg px-2 mx-1">CSS</span>
             </div>
 
             <div className="text-green-400 absolute top-1 sm:top-14 left-0 flex flex-col pt-4 gap-2">
-              <a
-                href="https://github.com/bekirugurr/todo-app-django"
+            <a
+                href="https://github.com/bekirugurr/Lucky-Numbers-Generator"
                 target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
                 <VscGithub className="w-8 h-8" />
               </a>
               <a
-                href="https://django-mytodo-app.herokuapp.com/"
+                href="https://bekirugurr.github.io/Lucky-Numbers-Generator/"
                 target="_blank"   rel="noreferrer"
                 className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
               >
