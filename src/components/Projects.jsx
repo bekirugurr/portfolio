@@ -220,11 +220,11 @@ const Projects = ({setActiveItem}) => {
             Portfolio
             </h2>
             <p className="ml-10  mr-1 mb-6 mt-2 md:mt-6 md:mb-0 lg:mb-6 lg:mt-2 ">
-            Responsive personel website. Tailwind was used. Framer Motion and react_scroll are used for transition. Firebase realtime database was used for sending message
+            Responsive personel website. Tailwind was used. Framer Motion and react_scroll are used for transition. Webhook was used for sending message
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
-            <span className="font-bold text-lg mx-1">React</span>
               <span className="font-bold text-lg mx-1">Tailwind</span>
+            <span className="font-bold text-lg mx-1">Webhook</span>
             </div>
 
             <div className="text-green-400 absolute top-1 sm:top-20 lg:top-22 left-0 flex flex-col pt-5 gap-2">

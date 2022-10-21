@@ -24,6 +24,8 @@ import TypeScript from "../assets/typescript.png";
 import Nodejs from "../assets/nodejs.png";
 import Docker from "../assets/docker.png";
 import ReactNative from "../assets/reactjs.png";
+import TestingLibrary from "../assets/testing-library.png";
+import Jest from "../assets/jest.png";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 
@@ -65,6 +67,7 @@ const Skills = ({ setActiveItem }) => {
     ["HTML5", HTML5],
     ["CSS3", CSS3],
     ["Javascript", Javascript],
+    ["TypeScript", TypeScript],
     ["React", React],
     ["Redux", Redux],
     ["Tailwind", Tailwind],
@@ -80,10 +83,12 @@ const Skills = ({ setActiveItem }) => {
     ["PostgreSQL", PostgreSQL],
     ["Heroku", Heroku],
     ["Styled", StyledComponent],
+    ["Jest", Jest],
+    ["TestingLibrary", TestingLibrary],    
   ];
 
   let futureTools = [
-    ["TypeScript", TypeScript],
+
      ["Docker", Docker], ["ReactNative", ReactNative],
     ["Nodejs", Nodejs],
   ];
@@ -100,7 +105,7 @@ const Skills = ({ setActiveItem }) => {
       <h3 className="text-2xl font-bold text-gray-800 mt-2 text-center lg:pr-10">
         Languages, libraries, frameworks and tools I use in development :
       </h3>
-      <ul className="flex flex-row flex-wrap px-4 lg:px-36 lg:ml-4 mt-2  mb-0 md:mb-2 overflow-hidden justify-center">
+      <ul className="flex flex-row flex-wrap px-4 lg:px-24 lg:ml-4 mt-2  mb-0 md:mb-2 overflow-hidden justify-center">
         {tools.map((item) => (
           <li
             key={item[1]}
