@@ -1,7 +1,7 @@
 import { useState, useId } from "react";
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
-import resume from '../assets/Resume.pdf'
+import resume from '../assets/Bekir_Ugur_Resume.pdf'
 
 const Navbar = ({ activeItem, setActiveItem }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
