@@ -85,7 +85,7 @@ const Contact = ({ setActiveItem }) => {
     <div
       ref={ref}
       id="contact"
-      className="h-screen pt-16 md:px-6 lg:px-16 bg-orange-50"
+      className="h-screen pt-16 md:px-6 lg:px-16 bg-orange-100/50"
     >
       <h1 className="text-4xl font-bold text-gray-800 mt-4 text-center">
         Contact

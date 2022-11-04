@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Background from "./components/Background";
 // import Certificates from './components/Certificates';
 import Contact from "./components/Contact";
 import Home from "./components/Home";
@@ -11,6 +12,7 @@ function App() {
   const [activeItem, setActiveItem] = useState(0);
   return (
     <>
+      <Background/>
       <Navbar activeItem={activeItem} setActiveItem={setActiveItem} />
       <Home setActiveItem={setActiveItem} />
       <Skills setActiveItem={setActiveItem} />

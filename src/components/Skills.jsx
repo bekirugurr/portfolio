@@ -97,7 +97,7 @@ const Skills = ({ setActiveItem }) => {
     <div
       ref={ref}
       id="skills"
-      className="min-h-screen font-body bg-orange-50 opacity-8 px-0 mx-0 pt-16 px-1 md:px-4 lg:px-12 pb-12 md:pb-24"
+      className="min-h-screen font-body bg-orange-100/50 opacity-8 px-0 mx-0 pt-16 px-1 md:px-4 lg:px-12 pb-12 md:pb-24"
     >
       <h1 className="text-4xl font-bold text-gray-800 mt-4 text-center">
         Skillset
