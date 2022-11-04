@@ -39,7 +39,7 @@ const Background = () => {
       <img
         src={html}
         alt="html"
-        className={`absolute w-14 h-14 top-[60%] left-[-5%] animate-html-roll`}
+        className={`absolute w-14 h-14 top-[60%] left-[-14%] animate-html-roll`}
       />
 
       <img
@@ -51,7 +51,7 @@ const Background = () => {
       <img
         src={python}
         alt="python"
-        className={`absolute w-14 h-14 top-[30%] left-[-5%] animate-python-roll`}
+        className={`absolute w-14 h-14 top-[30%] left-[-13%] animate-python-roll`}
       />
 
       <img
@@ -81,13 +81,13 @@ const Background = () => {
       <img
         src={sass}
         alt="sass"
-        className={`absolute w-14 h-14 top-[80%] left-[-5%] animate-sass-roll`}
+        className={`absolute w-14 h-14 top-[80%] left-[-14%] animate-sass-roll`}
       />
 
       <img
         src={psql}
         alt="postgreSQL"
-        className={`absolute w-14 h-14 top-[50%] left-[-5%] animate-psql-roll`}
+        className={`absolute w-14 h-14 top-[50%] left-[-14%] animate-psql-roll`}
       />
 
       <img
@@ -99,7 +99,7 @@ const Background = () => {
       <img
         src={mui}
         alt="Material UI"
-        className={`absolute w-14 h-14 top-[35%] left-[-7%] animate-mui-roll`}
+        className={`absolute w-14 h-14 top-[35%] left-[-14%] animate-mui-roll`}
       />
 
       <img

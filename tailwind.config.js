@@ -74,7 +74,7 @@ module.exports = {
         sass: {
           '0%': { transform: 'translateX(0) translateY(0) rotate(0deg)'},
           '20%': { transform: 'translateX(0) translateY(0) rotate(0deg)'},
-          '100%': { transform: 'translateX(35rem) translateY(-70rem) rotate(1080deg)'}
+          '100%': { transform: 'translateX(45rem) translateY(-70rem) rotate(1080deg)'}
         },
         jest: {
           '0%': { transform: 'translateX(0) translateY(0) rotate(0deg)'},
