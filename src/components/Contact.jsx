@@ -1,12 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
-import axios from "axios";
+import emailjs from '@emailjs/browser';
 
 const Contact = ({ setActiveItem }) => {
+  const form = useRef()
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    user_name: "",
+    user_email: "",
     message: "",
   });
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -55,25 +56,21 @@ const Contact = ({ setActiveItem }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.name && formData.email && formData.message) {
-      axios({
-        method: "post",
-        url: 'https://hook.eu1.make.com/ugheqyvezjdgb2juixebhrwbdzhn65qn',
-        data: formData,
-      })
-        .then((result) => {
+    if (formData.user_name && formData.user_email && formData.message) {
+
+      emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
+      .then((result) => {
+          console.log(result.text);
           setIsModalVisible(true)
           setTimeout(() => {
             setIsModalVisible(false)
           }, 4000);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-      // alert("Your message has been sent!");
+      }, (error) => {
+          console.log(error.text);
+      });
       setFormData({
-        name: "",
-        email: "",
+        user_name: "",
+        user_email: "",
         message: "",
       });
     } else {
@@ -91,6 +88,7 @@ const Contact = ({ setActiveItem }) => {
         Contact
       </h1>
       <form
+        ref={form}
         className="flex flex-col gap-3 justify-center items-center mx-auto mt-4 px-8  sm:w-10/12 md:w-9/12 lg:w-7/12  xl:w-6/12 overflow-hidden"
         onSubmit={handleSubmit}
       >
@@ -98,8 +96,8 @@ const Contact = ({ setActiveItem }) => {
           type="text"
           className="text-slate-600 placeholder-slate-600 font-semibold py-3 px-4 border-2 border-slate-600 rounded-xl bg-transparent w-full"
           placeholder="Name"
-          name="name"
-          value={formData.name}
+          name="user_name"
+          value={formData.user_name}
           onChange={handleFormData}
           animate={animationFromLeft}
         />
@@ -107,8 +105,8 @@ const Contact = ({ setActiveItem }) => {
           type="email"
           className="text-slate-600 placeholder-slate-600 font-semibold py-3 px-5 border-2 border-slate-600 rounded-xl bg-transparent w-full"
           placeholder="E-mail"
-          name="email"
-          value={formData.email}
+          name="user_email"
+          value={formData.user_email}
           onChange={handleFormData}
           animate={animationFromRight}
         />
