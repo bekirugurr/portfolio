@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Javascript from "../assets/javascript.png";
 import React from "../assets/reactjs.png";
+import Next from "../assets/nextjs.svg";
 import CSS3 from "../assets/css3.png";
 import django from "../assets/django2.png";
 import Firebase from "../assets/firebase.png";
@@ -16,7 +17,7 @@ import Python from "../assets/python.png";
 import Redux from "../assets/redux.png";
 import sass from "../assets/sass.png";
 import SQLite from "../assets/SQLite.png";
-import vscode from "../assets/vscode.png";
+// import vscode from "../assets/vscode.png";
 import StyledComponent from "../assets/styledComponent.png";
 import Tailwind from "../assets/tailwind.png";
 import Bootstrap from "../assets/bootstrap2.png";
@@ -69,6 +70,7 @@ const Skills = ({ setActiveItem }) => {
     ["Javascript", Javascript],
     ["TypeScript", TypeScript],
     ["React", React],
+    ["Next js", Next],
     ["Redux", Redux],
     ["Tailwind", Tailwind],
     ["jQuery", jQuery],
@@ -89,8 +91,7 @@ const Skills = ({ setActiveItem }) => {
 
   let futureTools = [
 
-     ["Docker", Docker], ["ReactNative", ReactNative],
-    ["Nodejs", Nodejs],
+    ["Nodejs", Nodejs], ["Docker", Docker], ["ReactNative", ReactNative],
   ];
  
   return (
@@ -155,20 +156,7 @@ const Skills = ({ setActiveItem }) => {
             Sass
           </motion.p>
         </li>
-        <li className="flex flex-col items-center my-2 mx-3 md:my-3 md:mx-6 pb-6 relative">
-          <motion.div
-            className="w-16 h-16 py-3 pl-2 pr-4 lg:w-19 lg:h-19 lg:py-3 md:pl-3 lg:pr-3 rounded-full bg-gray-200 border-solid border-2 border-gray-400"
-            animate={animationImage}
-          >
-            <img src={vscode} alt="VS Code" />
-          </motion.div>
-          <motion.p
-            className="text-gray-700 absolute bottom-0"
-            animate={animationText}
-          >
-            VSCode
-          </motion.p>
-        </li>
+
       </ul>
       <div className="flex flex-col  flex-wrap items-center justify-center">
         <h3 className="text-2xl font-bold text-gray-800 text-center lg:mr-10">

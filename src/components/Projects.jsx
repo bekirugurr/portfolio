@@ -2,8 +2,9 @@ import { useEffect } from "react";
 import blogGif from "../assets/blog_animation.gif";
 import cheackOutGif from "../assets/checkout.gif";
 import movieAppGif from "../assets/movieApp.gif";
+import popupGeneratorGif from "../assets/popupgenerator.gif";
 import todoGif from "../assets/todo.gif";
-import flightAPIGif from "../assets/flightAPI.gif";
+// import flightAPIGif from "../assets/flightAPI.gif";
 import { FiFolder } from "react-icons/fi";
 import { VscGithub } from "react-icons/vsc";
 import { HiOutlineExternalLink } from "react-icons/hi";
@@ -224,7 +225,7 @@ const Projects = ({setActiveItem}) => {
           </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg mx-1">Tailwind</span>
-            <span className="font-bold text-lg mx-1">Webhook</span>
+            <span className="font-bold text-lg mx-1">Framer</span>
             </div>
 
             <div className="text-green-400 absolute top-1 sm:top-20 lg:top-22 left-0 flex flex-col pt-5 gap-2">
@@ -340,6 +341,46 @@ const Projects = ({setActiveItem}) => {
         className="lg:flex-1 bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-between"
         animate={animationFromLeft3}
         >
+          <h2 className="text-2xl font-bold text-center mt-6 mb-2 ">
+            Popup Generator App
+          </h2>
+          <p className="mx-3 my-2 px-3">
+          It creates modular popups that user can use them into their sites without knowing coding. User can customize size, content, position, color of popup and add image. They can determine in which kind of device popup will appear, how many seconds after site opened or after what percentage of the page scrolled the popup will appear. User can allow popup to apper when user moves out the mouse cursor to close tab.  After these customization and just copying pasting given short code snippet before &lt;/body&gt; of tailwind installed html file the popup will work. 
+          </p>
+          <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 mb-1">
+            <span className="font-bold text-lg px-2 mx-1">Typescript</span>
+            <span className="font-bold text-lg px-2 mx-1">React</span>
+            <span className="font-bold text-lg px-2 mx-1">Nextjs</span>
+            <span className="font-bold text-lg px-2 mx-1">Redux</span>
+            <span className="font-bold text-lg px-2 mx-1">Tailwind</span>
+          </div>
+          <img
+            src={popupGeneratorGif}
+            alt="popup generator app"
+            className=" border-2 border-green-400 rounded-lg"
+          />
+          <FiFolder className="hidden sm:block w-12 h-12 text-green-400 absolute top-4 left-7" />
+          <div className="text-green-400 absolute top-4 right-2 left-2 flex flex-row justify-between sm:justify-end">
+            <a
+              href="https://github.com/bekirugurr/popup-generator"
+              target="_blank"   rel="noreferrer"
+              className="flex flex-col items-center hover:text-slate-300 px-3 pb-1"
+            >
+              <VscGithub className="w-8 h-8" />
+            </a>
+            <a
+              href="https://popup-generator.vercel.app/"
+              target="_blank"   rel="noreferrer"
+              className="flex flex-col items-center hover:text-slate-300 px-3 pb-1"
+            >
+              <HiOutlineExternalLink className="w-8 h-8" />
+            </a>
+          </div>
+        </motion.div>
+        {/* <motion.div 
+        className="lg:flex-1 bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-between"
+        animate={animationFromLeft3}
+        >
           <h2 className="text-2xl font-bold text-center mt-6 mb-2 lg:pl-2">
             Flight Reservation API
           </h2>
@@ -365,12 +406,32 @@ const Projects = ({setActiveItem}) => {
               <VscGithub className="w-8 h-8" />
             </a>
           </div>
-        </motion.div>
+        </motion.div> */}
         <motion.div 
         className="lg:flex-1 grid grid-cols-1 sm:grid-cols-2 gap-5  items-center rounded-lg "
         animate={animationFromRight3}
         >
           <div className="sm:col-span-2 h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
+            <h2 className="text-2xl font-bold text-center my-3">Flight API</h2>
+            <p className="mx-3 px-3 mt-4 mb-6">
+            Authenticated users can CRUD reservations. Only admin users can CRUD flights. While admin user can see all reservations, authenticated ordinay users can see the reservations that they made. Also, admin user can see past and future flights, ordinary users can only see the next flights from now.
+          </p>
+            <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
+              <span className="font-bold text-lg px-2 mx-1">Django Rest Framework</span>
+              <span className="font-bold text-lg px-2 mx-1">PostgreSQL</span>
+            </div>
+            <FiFolder className="hidden sm:block w-12 h-12 text-green-400 absolute top-4 left-7" />
+            <div className="text-green-400 absolute  top-4 right-2 flex">
+              <a
+                href="https://github.com/bekirugurr/flight-reservation-app-django"
+                target="_blank"   rel="noreferrer"
+                className="flex flex-col items-center hover:text-slate-300 px-3 pb-1"
+              >
+                <VscGithub className="w-8 h-8" />
+              </a>
+            </div>
+          </div>
+{/*           <div className="sm:col-span-2 h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center my-3">Quiz API</h2>
             <p className="mx-3 px-3 mt-4 mb-6">
             Quiz API generates test quizzes. There are answers under questions under quizzes under categories. Admin panel was customized as nested admin panel so that the admin can enter the exam, questions and answers together. Adding, deleting and updating can be done. 
@@ -389,8 +450,29 @@ const Projects = ({setActiveItem}) => {
                 <VscGithub className="w-8 h-8" />
               </a>
             </div>
-          </div>
+          </div> */}
           <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative  pb-2 rounded-lg text-white flex flex-col justify-start relative">
+            <h2 className="text-2xl font-bold text-center my-3">
+              Quiz API
+            </h2>
+            <p className="ml-10  mr-1 mb-6 ">
+            Quiz API generates test quizzes. There are answers under questions under quizzes under categories. Admin panel is nested so that the admin can enter the exam, questions and answers together. CRUD can be done.
+          </p>
+            <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
+              <span className="font-bold text-lg px-2 mx-1">dj rest auth</span>
+            </div>
+
+            <div className="text-green-400 absolute top-1 sm:top-32 left-0 flex flex-col pt-4 gap-2">
+              <a
+                href="https://github.com/bekirugurr/quiz-app-django"
+                target="_blank"   rel="noreferrer"
+                className="flex flex-col items-center hover:text-slate-300 px-1 pb-1"
+              >
+                <VscGithub className="w-8 h-8" />
+              </a>
+            </div>
+          </div>
+          {/* <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative  pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center my-3">
               Number Game
             </h2>
@@ -418,12 +500,12 @@ const Projects = ({setActiveItem}) => {
                 <HiOutlineExternalLink className="w-8 h-8" />
               </a>
             </div>
-          </div>
+          </div> */}
           <div className=" h-full bg-slate-800 hover:bg-red-500 opacity-90 items-center relative px-2 pb-2 rounded-lg text-white flex flex-col justify-start relative">
             <h2 className="text-2xl font-bold text-center my-3 px-2">
               Django Blog 
             </h2>
-            <p className="mr-8 mr-4 mb-6">
+            <p className="mr-8 mr-4 ml-6 mb-6">
             Adding, deleting and updating blog posts, register, login and updating profile can be done. django was used for frontend (django templates) and backend. </p>
             <div className="bottom-0 w-full hidden sm:flex justify-center text-green-400 absolute bottom-2">
               <span className="font-bold text-lg px-2 mx-1">Django</span>

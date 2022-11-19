@@ -1,6 +1,7 @@
 import javascript from "../assets/javascript.png";
 import typeScript from "../assets/typescript.png";
 import react from "../assets/reactjs.png";
+import next from "../assets/nextjs.svg";
 import django from "../assets/django2.png";
 import html from "../assets/html5.png";
 import python from "../assets/python.png";
@@ -23,6 +24,11 @@ const Background = () => {
         alt="Javascript"
         className={`absolute w-14 h-14 top-[97%] left-[20%] animate-js-roll`}
       />
+      <img
+        src={javascript}
+        alt="Javascript"
+        className={`absolute w-14 h-14 top-[-14%] left-[14%]  animate-js2-roll`}
+      />
 
       <img
         src={typeScript}
@@ -34,6 +40,16 @@ const Background = () => {
         src={react}
         alt="react"
         className={`absolute w-14 h-14 top-[-7%] left-[20%] animate-react-roll`}
+      />
+      <img
+        src={react}
+        alt="react"
+        className={`absolute w-14 h-14 top-[12%] right-[-14%] animate-react2-roll `}
+      />
+      <img
+        src={next}
+        alt="nextjs"
+        className={`absolute w-14 h-14 bottom-[4%] right-[-14%] animate-next-roll`}
       />
 
       <img
@@ -49,9 +65,21 @@ const Background = () => {
       />
 
       <img
+        src={typeScript}
+        alt="typeScript"
+        className={`absolute w-14 h-14  top-[-10%] left-[0%] animate-ts2-roll`}
+      />
+
+      <img
         src={python}
         alt="python"
         className={`absolute w-14 h-14 top-[30%] left-[-13%] animate-python-roll`}
+      />
+
+      <img
+        src={python}
+        alt="python"
+        className={`absolute w-14 h-14 top-[25%] right-[-14%] animate-python2-roll`}
       />
 
       <img
@@ -63,7 +91,13 @@ const Background = () => {
       <img
         src={tailwind}
         alt="tailwind"
-        className={`absolute w-14 h-14  top-[-7%] left-[80%] animate-tailwind-roll`}
+        className={`absolute w-14 h-14  top-[-13%] left-[80%] animate-tailwind-roll`}
+      />
+
+      <img
+        src={tailwind}
+        alt="tailwind"
+        className={`absolute w-14 h-14  bottom-[30%] left-[-14%]  animate-tailwind2-roll`}
       />
 
       <img
