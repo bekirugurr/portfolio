@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import blogGif from "../assets/blog_animation.gif";
 import cheackOutGif from "../assets/checkout.gif";
 import movieAppGif from "../assets/movieApp.gif";
-import popupGeneratorGif from "../assets/popupgenerator.gif";
+import popupGeneratorGif from "../assets/popupgenerator_short_gif.gif";
 import todoGif from "../assets/todo.gif";
 // import flightAPIGif from "../assets/flightAPI.gif";
 import { FiFolder } from "react-icons/fi";
