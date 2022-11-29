@@ -1,7 +1,7 @@
 import { useState, useId } from "react";
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
-import resume from '../assets/Bekir_Ugur_Resume.pdf'
+// import resume from '../assets/Bekir_Ugur_Resume.pdf'
 
 const Navbar = ({ activeItem, setActiveItem }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -71,14 +71,14 @@ const Navbar = ({ activeItem, setActiveItem }) => {
                 )}
               </li>
             ))}
-            <li
+{/*             <li
               className="text-gray-900 flex justify-center items-center text-base font-normal leading-snug pl-3"
               onClick={() => setNavbarOpen(false)}
             >
               <button className="rounded-full text-white bg-green-500 px-3 py-1.5 hover:outline hover:outline-2 hover:outline-offset-[-3px] hover:text-green-500 hover:bg-gray-200/75">
                 <a href={resume} download>Resume</a>
               </button>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
