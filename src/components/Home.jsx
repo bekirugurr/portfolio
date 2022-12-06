@@ -27,6 +27,7 @@ const Home = ({ setActiveItem }) => {
           initial={{ x: "-30vw", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ type: "tween", duration: 0.7, ease: "easeOut" }}
+          loading='lazy'
         />
 
         <div className="flex flex-col gap-1 mt-8 md:-mt-4 lg:mt-0 overflow-hidden">
